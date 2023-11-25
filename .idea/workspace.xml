@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d625be6d-eea0-4229-9f10-cfc1c9fdc8ea" name="Changes" comment="" />
+    <list default="true" id="d625be6d-eea0-4229-9f10-cfc1c9fdc8ea" name="Changes" comment="Init: Basic UI set up with local mock data" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,6 +18,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -25,6 +28,7 @@
   &quot;associatedIndex&quot;: 8
 }</component>
   <component name="ProjectId" id="2YUseH7SZjVsktd7Px906AGWTaj" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -34,6 +38,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
     "last_opened_file_path": "/Users/rezdelamasa/WebstormProjects/camo-tracker/my-app/src/components",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -103,11 +108,24 @@
       <updated>1700591586087</updated>
       <workItem from="1700591587201" duration="81000" />
       <workItem from="1700591681265" duration="1995000" />
-      <workItem from="1700594591513" duration="44904000" />
+      <workItem from="1700594591513" duration="45118000" />
     </task>
+    <task id="LOCAL-00001" summary="Init: Basic UI set up with local mock data">
+      <option name="closed" value="true" />
+      <created>1700947665684</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1700947665684</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Init: Basic UI set up with local mock data" />
+    <option name="LAST_COMMIT_MESSAGE" value="Init: Basic UI set up with local mock data" />
   </component>
 </project>
