@@ -1,0 +1,59 @@
+/**
+ * src/styles/settings.scss
+ *
+ * Configures SASS variables and Vuetify overwrites
+ */
+
+// https://vuetifyjs.com/features/sass-variables/`
+// @use 'vuetify/settings' with (
+//   $color-pack: false
+// );
+
+.main, .v-main {
+  background: #222226;
+}
+
+.class-card {
+  border: 2px solid white;
+  background: #1B263B;
+}
+
+.camo-card {
+  background: #161618;
+}
+
+.camo__progress-button {
+  background: #161618;
+  border: 2px solid white;
+  color: white;
+}
+
+.progress__input {
+  width: 56px;
+  max-width: 56px;
+}
+
+.progress__input input {
+  width: 56px;
+}
+
+.v-expansion-panel-title__overlay {
+  opacity: 0!important;
+}
+
+.v-expansion-panel__shadow {
+  display: none;
+}
+
+.v-expansion-panel-title {
+  padding: 0;
+  background: transparent;
+}
+
+.v-expansion-panel-text__wrapper {
+  padding: 0;
+}
+
+//.weapon__row {
+//  background: #415A77;
+//}
