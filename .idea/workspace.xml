@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d625be6d-eea0-4229-9f10-cfc1c9fdc8ea" name="Changes" comment="Init: Basic UI set up with local mock data" />
+    <list default="true" id="d625be6d-eea0-4229-9f10-cfc1c9fdc8ea" name="Changes" comment="chore: git">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/data/restructuredData.json" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/data/restructuredData.json" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -19,6 +22,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="feat/forged-lock-unlock" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -38,7 +46,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "feat/data-restructure-linked-camo-array",
     "last_opened_file_path": "/Users/rezdelamasa/WebstormProjects/camo-tracker/my-app/src/components",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -108,7 +116,7 @@
       <updated>1700591586087</updated>
       <workItem from="1700591587201" duration="81000" />
       <workItem from="1700591681265" duration="1995000" />
-      <workItem from="1700594591513" duration="45118000" />
+      <workItem from="1700594591513" duration="46124000" />
     </task>
     <task id="LOCAL-00001" summary="Init: Basic UI set up with local mock data">
       <option name="closed" value="true" />
@@ -118,14 +126,34 @@
       <option name="project" value="LOCAL" />
       <updated>1700947665684</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="chore: git">
+      <option name="closed" value="true" />
+      <created>1700947735374</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1700947735374</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Init: Basic UI set up with local mock data" />
-    <option name="LAST_COMMIT_MESSAGE" value="Init: Basic UI set up with local mock data" />
+    <MESSAGE value="chore: git" />
+    <option name="LAST_COMMIT_MESSAGE" value="chore: git" />
   </component>
 </project>
