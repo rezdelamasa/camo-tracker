@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d625be6d-eea0-4229-9f10-cfc1c9fdc8ea" name="Changes" comment="chore: git">
+    <list default="true" id="d625be6d-eea0-4229-9f10-cfc1c9fdc8ea" name="Changes" comment="feat: update mock data to have camos array with camos that are linked to weapons through weaponId">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/components/ProgressCard.vue" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/CamoCard.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-app/src/data/restructuredData.json" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/data/restructuredData.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/store/app.ts" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/store/app.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/views/Weapon.vue" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/views/Weapon.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,6 +34,9 @@
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
@@ -116,7 +122,7 @@
       <updated>1700591586087</updated>
       <workItem from="1700591587201" duration="81000" />
       <workItem from="1700591681265" duration="1995000" />
-      <workItem from="1700594591513" duration="46124000" />
+      <workItem from="1700594591513" duration="51162000" />
     </task>
     <task id="LOCAL-00001" summary="Init: Basic UI set up with local mock data">
       <option name="closed" value="true" />
@@ -134,7 +140,15 @@
       <option name="project" value="LOCAL" />
       <updated>1700947735374</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="feat: update mock data to have camos array with camos that are linked to weapons through weaponId">
+      <option name="closed" value="true" />
+      <created>1700948742454</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1700948742454</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -154,6 +168,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Init: Basic UI set up with local mock data" />
     <MESSAGE value="chore: git" />
-    <option name="LAST_COMMIT_MESSAGE" value="chore: git" />
+    <MESSAGE value="feat: update mock data to have camos array with camos that are linked to weapons through weaponId" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: update mock data to have camos array with camos that are linked to weapons through weaponId" />
   </component>
 </project>
