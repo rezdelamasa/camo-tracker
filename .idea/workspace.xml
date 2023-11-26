@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d625be6d-eea0-4229-9f10-cfc1c9fdc8ea" name="Changes" comment="feat: update mock data to have camos array with camos that are linked to weapons through weaponId">
+    <list default="true" id="d625be6d-eea0-4229-9f10-cfc1c9fdc8ea" name="Changes" comment="update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/components/ProgressCard.vue" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/CamoCard.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/data/restructuredData.json" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/data/restructuredData.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/store/app.ts" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/store/app.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/components/CamoCard.vue" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/CamoCard.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-app/src/views/Weapon.vue" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/views/Weapon.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -122,7 +120,7 @@
       <updated>1700591586087</updated>
       <workItem from="1700591587201" duration="81000" />
       <workItem from="1700591681265" duration="1995000" />
-      <workItem from="1700594591513" duration="51162000" />
+      <workItem from="1700594591513" duration="51642000" />
     </task>
     <task id="LOCAL-00001" summary="Init: Basic UI set up with local mock data">
       <option name="closed" value="true" />
@@ -148,7 +146,87 @@
       <option name="project" value="LOCAL" />
       <updated>1700948742454</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="feat: getter for weapon camos based on route">
+      <option name="closed" value="true" />
+      <created>1701027243864</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1701027243864</updated>
+    </task>
+    <task id="LOCAL-00005" summary="chore: delete console logs">
+      <option name="closed" value="true" />
+      <created>1701027261340</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1701027261340</updated>
+    </task>
+    <task id="LOCAL-00006" summary="feat: use new weaponCamos getter">
+      <option name="closed" value="true" />
+      <created>1701027283611</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1701027283611</updated>
+    </task>
+    <task id="LOCAL-00007" summary="chore: delete console log">
+      <option name="closed" value="true" />
+      <created>1701027293923</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1701027293923</updated>
+    </task>
+    <task id="LOCAL-00008" summary="chore: delete console log">
+      <option name="closed" value="true" />
+      <created>1701027298930</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1701027298930</updated>
+    </task>
+    <task id="LOCAL-00009" summary="feat: implement weaponCamos getter">
+      <option name="closed" value="true" />
+      <created>1701027317155</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1701027317155</updated>
+    </task>
+    <task id="LOCAL-00010" summary="chore: rename ProgressCard to CamoCard">
+      <option name="closed" value="true" />
+      <created>1701027342126</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1701027342126</updated>
+    </task>
+    <task id="LOCAL-00011" summary="feat: restructure mock data">
+      <option name="closed" value="true" />
+      <created>1701027431858</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1701027431858</updated>
+    </task>
+    <task id="LOCAL-00012" summary="chore: rename CamoCard">
+      <option name="closed" value="true" />
+      <created>1701027449998</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1701027449998</updated>
+    </task>
+    <task id="LOCAL-00013" summary="update">
+      <option name="closed" value="true" />
+      <created>1701027457614</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1701027457614</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -169,6 +247,15 @@
     <MESSAGE value="Init: Basic UI set up with local mock data" />
     <MESSAGE value="chore: git" />
     <MESSAGE value="feat: update mock data to have camos array with camos that are linked to weapons through weaponId" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: update mock data to have camos array with camos that are linked to weapons through weaponId" />
+    <MESSAGE value="feat: getter for weapon camos based on route" />
+    <MESSAGE value="chore: delete console logs" />
+    <MESSAGE value="feat: use new weaponCamos getter" />
+    <MESSAGE value="chore: delete console log" />
+    <MESSAGE value="feat: implement weaponCamos getter" />
+    <MESSAGE value="chore: rename ProgressCard to CamoCard" />
+    <MESSAGE value="feat: restructure mock data" />
+    <MESSAGE value="chore: rename CamoCard" />
+    <MESSAGE value="update" />
+    <option name="LAST_COMMIT_MESSAGE" value="update" />
   </component>
 </project>
