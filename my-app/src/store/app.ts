@@ -125,8 +125,6 @@ export const useDataStore = defineStore('counter', () => {
 
     if(!nextLocked) return;
 
-    console.log(baseCompletionCount);
-
     if(baseCompletionCount === 4) {
     //    then continue to gilded
       if(nextLocked.type === "Mastery") {
