@@ -114,7 +114,6 @@ export const useDataStore = defineStore('counter', () => {
   // FUNCTION to update current camo progress status to complete
   // Used when incrementing, decrementing, or completing
   function updateCamoComplete(currentCamo) {
-
     currentCamo.progress.status = "Complete";
 
     const target = weaponCamos.value.find((camo) => camo.name === currentCamo.name);
