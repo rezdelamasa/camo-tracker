@@ -76,7 +76,7 @@ export const useDataStore = defineStore('counter', () => {
   }
 
   // GETTER boolean if all weapons in class are gilded
-  // Used determine if locked gilded challenge can be set to In Progress
+  // Used determine if locked forged challenge can be set to In Progress
   const allClassWeaponsGilded = computed(() => {
     const classWeaponCount = currentClassWeapons.value.length;
 
@@ -93,6 +93,16 @@ export const useDataStore = defineStore('counter', () => {
     return gildedCounter === classWeaponCount;
   })
 
+  // GETTER boolean if all weapons are forged
+  // Used determine if locked priceless challenge can be set to In Progress
+  const allWeaponsForged = computed(() => {
+    const completedForgedChallenges = data.value.camos.filter((camo) =>
+      camo.name === "Forged" && camo.progress.status === "Complete"
+    );
+
+    return completedForgedChallenges.length === data.value.weapons.length;
+  })
+
   // FUNCTION to update the status of the next locked mastery camo to in progress
   // Used when completing a camo
   // Only applicable to mastery camos
@@ -105,6 +115,8 @@ export const useDataStore = defineStore('counter', () => {
     if(!nextLocked) return;
     if(nextLocked.name === "Gilded" && !allBaseCamosCompleted.value) return;
     if(nextLocked.name === "Forged" && !allClassWeaponsGilded.value) return;
+    if(nextLocked.name === "Priceless" && !allWeaponsForged.value) return;
+
     nextLocked.progress.status = "In Progress"
   }
 
