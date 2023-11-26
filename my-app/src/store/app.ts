@@ -21,6 +21,7 @@ export const useDataStore = defineStore('counter', () => {
     return [];
   })
 
+  // GETTER for current class based on route params
   const currentClass = computed(() => {
     return data.value.classes.find((dataClass) =>
         dataClass.slug === routeParams.value.weaponClass
@@ -65,6 +66,7 @@ export const useDataStore = defineStore('counter', () => {
     )
   })
 
+  // GETTER for current weapon based on route params
   const currentWeapon = computed(() => {
     return data.value.weapons.find((weapon) =>
         weapon.slug === routeParams.value.weapon
@@ -95,12 +97,22 @@ export const useDataStore = defineStore('counter', () => {
     )
   })
 
+  // GETTER for current weapon's mastery camos
   const masteryCamos = computed(() => {
     return weaponCamos.value.filter((camo) =>
         camo.type === "Mastery"
     )
   })
 
+  // GETTER boolean if weapon's base camos are completed
+  const allBaseCamosCompleted = computed(() => {
+    return baseCamos.value.filter((camo) =>
+        camo.progress.status === "Complete"
+    ).length === baseCamos.value.length;
+  })
+
+  // FUNCTION to update current camo progress status to complete
+  // Used when incrementing, decrementing, or completing
   function updateCamoComplete(currentCamo) {
 
     currentCamo.progress.status = "Complete";
@@ -112,6 +124,28 @@ export const useDataStore = defineStore('counter', () => {
     queueNextInProgress(currentCamo);
   }
 
+  // GETTER boolean if all weapons in class are gilded
+  // Used determine if locked gilded challenge can be set to In Progress
+  const allClassWeaponsGilded = computed(() => {
+    const classWeaponCount = currentClassWeapons.value.length;
+
+    const weaponIds = currentClassWeapons.value.map((weapon) => weapon.id);
+
+    let gildedCounter = 0;
+
+    data.value.camos.forEach((camo) => {
+      if(weaponIds.includes(camo.weaponId) && camo.name === "Gilded" && camo.progress.status === "Complete") {
+        gildedCounter++;
+      }
+    })
+
+    return gildedCounter === classWeaponCount;
+  })
+
+  // FUNCTION to update the status of the next locked mastery camo to in progress
+  // Used when completing a camo
+  // Only applicable to mastery camos
+  // because all base camos will always be unlocked (not tracking level progression, just camo progression)
   function queueNextInProgress() {
     const baseCompletionCount = weaponCamos.value.filter((camo) =>
       camo.type === "Base" && camo.progress.status === "Complete"
@@ -131,6 +165,7 @@ export const useDataStore = defineStore('counter', () => {
     }
   }
 
+  // FUNCTION to update the current camo to in progress
   function updateCamoInProgress(currentCamo) {
 
     currentCamo.progress.status = "In Progress";
@@ -140,6 +175,8 @@ export const useDataStore = defineStore('counter', () => {
     Object.assign(target, currentCamo);
   }
 
+  // ACTION to decrement the current camo's progression
+  // dispatched from UI
   function decrement(currentCamo) {
 
     if(currentCamo.progress.count.current === 0) {
@@ -159,6 +196,8 @@ export const useDataStore = defineStore('counter', () => {
     Object.assign(target, currentCamo);
   }
 
+  // ACTION to increment the current camo's progression
+  // dispatched from UI
   function increment(currentCamo) {
     if(currentCamo.progress.count.current === currentCamo.progress.count.completion) {
       return;
@@ -176,6 +215,8 @@ export const useDataStore = defineStore('counter', () => {
     Object.assign(target, currentCamo);
   }
 
+  // ACTION to max the current camo's progression
+  // dispatched from UI
   function complete(currentCamo) {
 
     currentCamo.progress.count.current = currentCamo.progress.count.completion;
