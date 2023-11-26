@@ -144,8 +144,9 @@
     ],
     "camos": [
       {
-        "id": "sva-blue-tones",
+        "id": "blue-tones",
         "weaponId": "sva",
+        "classId": "assault",
         "name": "Blue Tones",
         "challenge": "Get 50 Kills",
         "level": 2,
@@ -159,8 +160,9 @@
         }
       },
       {
-        "id": "sva-topo-muddy",
+        "id": "topo-muddy",
         "weaponId": "sva",
+        "classId": "assault",
         "name": "Topo Muddy",
         "challenge": "Get 50 Kills while ADS",
         "level": 13,
@@ -174,8 +176,9 @@
         }
       },
       {
-        "id": "sva-cinders",
+        "id": "cinders",
         "weaponId": "sva",
+        "classId": "assault",
         "name": "Cinders",
         "challenge": "Get 15 Headshot Kills",
         "level": 20,
@@ -189,8 +192,9 @@
         }
       },
       {
-        "id": "sva-monarch",
+        "id": "monarch",
         "weaponId": "sva",
+        "classId": "assault",
         "name": "Monarch",
         "challenge": "Get 25 kills while in Tac Stance",
         "level": 30,
@@ -206,6 +210,7 @@
       {
         "id": "sva-gilded",
         "weaponId": "sva",
+        "classId": "assault",
         "name": "Gilded",
         "challenge": "Get three kills with one mag 10 times",
         "type": "Mastery",
@@ -221,6 +226,7 @@
       {
         "id": "sva-forged",
         "weaponId": "sva",
+        "classId": "assault",
         "name": "Forged",
         "challenge": "Get 25 multikills",
         "type": "Mastery",
@@ -236,6 +242,7 @@
       {
         "id": "sva-priceless",
         "weaponId": "sva",
+        "classId": "assault",
         "name": "Priceless",
         "challenge": "Get 15 headshots with a magnification scope",
         "type": "Mastery",
@@ -251,6 +258,7 @@
       {
         "id": "sva-interstellar",
         "weaponId": "sva",
+        "classId": "assault",
         "name": "Interstellar",
         "challenge": "Complete 36 Priceless camo challenges",
         "type": "Mastery",
@@ -264,9 +272,10 @@
         }
       },
       {
-        "id": "mtz-blue-tones",
+        "id": "orange-tones",
         "weaponId": "mtz",
-        "name": "Blue Tones",
+        "classId": "assault",
+        "name": "Orange Tones",
         "challenge": "Get 50 Kills",
         "level": 2,
         "type": "Base",
@@ -279,11 +288,12 @@
         }
       },
       {
-        "id": "mtz-topo-muddy",
+        "id": "iris-glitch",
         "weaponId": "mtz",
-        "name": "Topo Muddy",
+        "classId": "assault",
+        "name": "Iris Glitch",
         "challenge": "Get 50 Kills while ADS",
-        "level": 13,
+        "level": 11,
         "type": "Base",
         "progress": {
           "status": "Complete",
@@ -294,11 +304,12 @@
         }
       },
       {
-        "id": "mtz-cinders",
+        "id": "germ-factory",
         "weaponId": "mtz",
-        "name": "Cinders",
+        "classId": "assault",
+        "name": "Germ Factory",
         "challenge": "Get 15 Headshot Kills",
-        "level": 20,
+        "level": 17,
         "type": "Base",
         "progress": {
           "status": "In Progress",
@@ -309,11 +320,12 @@
         }
       },
       {
-        "id": "mtz-monarch",
+        "id": "purple",
         "weaponId": "mtz",
-        "name": "Monarch",
+        "classId": "assault",
+        "name": "Purple",
         "challenge": "Get 25 kills while in Tac Stance",
-        "level": 30,
+        "level": 26,
         "type": "Base",
         "progress": {
           "status": "In Progress",
@@ -326,8 +338,9 @@
       {
         "id": "mtz-gilded",
         "weaponId": "mtz",
+        "classId": "assault",
         "name": "Gilded",
-        "challenge": "Get three kills with one mag 10 times",
+        "challenge": "Get 3 operator kills with 1 magazine 10 times",
         "type": "Mastery",
         "progress": {
           "status": "Locked",
@@ -341,8 +354,9 @@
       {
         "id": "mtz-forged",
         "weaponId": "mtz",
+        "classId": "assault",
         "name": "Forged",
-        "challenge": "Get 25 multikills",
+        "challenge": "Get 10 kills while moving in tac-stance",
         "type": "Mastery",
         "progress": {
           "status": "Locked",
@@ -356,8 +370,9 @@
       {
         "id": "mtz-priceless",
         "weaponId": "mtz",
+        "classId": "assault",
         "name": "Priceless",
-        "challenge": "Get 15 headshots with a magnification scope",
+        "challenge": "Get 10 enemies affected by your tactical while in Tac Stance",
         "type": "Mastery",
         "progress": {
           "status": "Locked",
@@ -371,8 +386,9 @@
       {
         "id": "mtz-interstellar",
         "weaponId": "mtz",
+        "classId": "assault",
         "name": "Interstellar",
-        "challenge": "Complete 36 Priceless camo challenges",
+        "challenge": "Complete 36 Priceless Camo Challenges",
         "type": "Mastery",
         "progress": {
           "status": "Locked",
