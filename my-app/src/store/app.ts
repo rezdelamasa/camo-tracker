@@ -28,34 +28,7 @@ export const useDataStore = defineStore('counter', () => {
     )
   })
 
-  const currentWeaponGildedComplete = computed(() => {
-    const gildedCamo = currentWeapon.value.camos.find((camo) =>
-      camo.name === 'Gilded'
-    )
-
-    return gildedCamo.progress.status === "Complete";
-  })
-
-  const currentClassGildedProgress = computed(() => {
-    let gildedProgress = 0;
-    const classWeapons = data.value.weapons.filter((weapon) =>
-      weapon.classId === currentClass.value.id
-    )
-
-    classWeapons.forEach((weapon) => {
-      const gildedChallenge = weapon.camos.find((camo) =>
-        camo.name === "Gilded"
-      );
-
-      if(gildedChallenge.progress.status === "Complete") {
-        gildedProgress++;
-      }
-    })
-
-    return gildedProgress;
-
-  })
-
+  // GETTER for current class weapons
   const currentClassWeapons = computed(() => {
     const currentClass = data.value.classes.find((dataClass) =>
       dataClass.slug === routeParams.value.weaponClass
