@@ -98,22 +98,14 @@ export const useDataStore = defineStore('counter', () => {
   // Only applicable to mastery camos
   // because all base camos will always be unlocked (not tracking level progression, just camo progression)
   function queueNextInProgress() {
-    const baseCompletionCount = weaponCamos.value.filter((camo) =>
-      camo.type === "Base" && camo.progress.status === "Complete"
-    ).length;
-
-    let nextLocked = weaponCamos.value.find((camo) =>
-        camo.progress.status === "Locked"
+    const nextLocked = weaponCamos.value.find((camo) =>
+        camo.progress.status === "Locked" && camo.type === "Mastery"
     )
 
     if(!nextLocked) return;
-
-    if(baseCompletionCount === 4) {
-    //    then continue to gilded
-      if(nextLocked.type === "Mastery") {
-        nextLocked.progress.status = "In Progress"
-      }
-    }
+    if(nextLocked.name === "Gilded" && !allBaseCamosCompleted.value) return;
+    if(nextLocked.name === "Forged" && !allClassWeaponsGilded.value) return;
+    nextLocked.progress.status = "In Progress"
   }
 
   // FUNCTION to update the current camo to in progress
