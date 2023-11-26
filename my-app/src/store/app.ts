@@ -30,12 +30,8 @@ export const useDataStore = defineStore('counter', () => {
 
   // GETTER for current class weapons
   const currentClassWeapons = computed(() => {
-    const currentClass = data.value.classes.find((dataClass) =>
-      dataClass.slug === routeParams.value.weaponClass
-    )
-
     return data.value.weapons.filter((weapon) =>
-      weapon.classId === currentClass.id
+      weapon.classId === currentClass.value.id
     )
   })
 
