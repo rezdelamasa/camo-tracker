@@ -11,6 +11,16 @@ export const useDataStore = defineStore('counter', () => {
   })
   const data:Object = ref(mock.data)
 
+  // GETTER for current weapon camos
+  const weaponCamos = computed(() => {
+    if(route.params.weapon) {
+      return data.value.camos.filter((camo) =>
+        camo.weaponId == currentWeapon.value.id
+      )
+    }
+    return [];
+  })
+
   const currentClass = computed(() => {
     return data.value.classes.find((dataClass) =>
         dataClass.slug === routeParams.value.weaponClass
