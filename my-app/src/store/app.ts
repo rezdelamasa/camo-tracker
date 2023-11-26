@@ -182,12 +182,13 @@ export const useDataStore = defineStore('counter', () => {
 
     currentCamo.progress.count.current = currentCamo.progress.count.completion;
 
-    const target = currentWeapon.value.camos.find((camo) => camo.name === currentCamo.name);
+    const target = weaponCamos.value.find((camo) => camo.name === currentCamo.name);
 
     Object.assign(target, currentCamo);
 
     updateCamoComplete(currentCamo);
   }
 
-  return { data, decrement, increment, complete, storeInProgress, storeComplete, storeLocked, currentClassWeapons, currentWeapon, currentClass, baseCamos, masteryCamos, currentWeaponGildedComplete, currentClassGildedProgress }
+  return { data, decrement, increment, complete, storeInProgress, storeComplete, storeLocked, currentClassWeapons, currentWeapon, currentClass, baseCamos, masteryCamos, currentWeaponGildedComplete, currentClassGildedProgress,
+    weaponCamos }
 })
