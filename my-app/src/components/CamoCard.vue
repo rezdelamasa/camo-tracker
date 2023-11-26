@@ -1,5 +1,4 @@
 <script setup lang="ts">
-  import { useDataStore } from '@/store/app'
   const props = defineProps({
     weapon: Object,
     camo: Object
