@@ -92,13 +92,13 @@ export const useDataStore = defineStore('counter', () => {
   })
 
   const baseCamos = computed(() => {
-    return currentWeapon.value.camos.filter((camo) =>
+    return weaponCamos.value.filter((camo) =>
       camo.type === "Base"
     )
   })
 
   const masteryCamos = computed(() => {
-    return currentWeapon.value.camos.filter((camo) =>
+    return weaponCamos.value.filter((camo) =>
         camo.type === "Mastery"
     )
   })
@@ -107,7 +107,7 @@ export const useDataStore = defineStore('counter', () => {
 
     currentCamo.progress.status = "Complete";
 
-    const target = currentWeapon.value.camos.find((camo) => camo.name === currentCamo.name);
+    const target = weaponCamos.value.find((camo) => camo.name === currentCamo.name);
 
     Object.assign(target, currentCamo);
 
@@ -115,11 +115,11 @@ export const useDataStore = defineStore('counter', () => {
   }
 
   function queueNextInProgress(currentCamo) {
-    const baseCompletionCount = currentWeapon.value.camos.filter((camo) =>
+    const baseCompletionCount = weaponCamos.value.filter((camo) =>
       camo.type === "Base" && camo.progress.status === "Complete"
     ).length;
 
-    let nextLocked = currentWeapon.value.camos.find((camo) =>
+    let nextLocked = weaponCamos.value.find((camo) =>
         camo.progress.status === "Locked"
     )
 
