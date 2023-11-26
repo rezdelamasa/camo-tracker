@@ -171,6 +171,5 @@ export const useDataStore = defineStore('counter', () => {
     updateCamoComplete(currentCamo);
   }
 
-  return { data, decrement, increment, complete, storeInProgress, storeComplete, storeLocked, currentClassWeapons, currentWeapon, currentClass, baseCamos, masteryCamos, currentWeaponGildedComplete, currentClassGildedProgress,
-    weaponCamos }
+  return { data, decrement, increment, complete, currentClassWeapons, currentWeapon, currentClass, baseCamos, masteryCamos, weaponCamos }
 })
