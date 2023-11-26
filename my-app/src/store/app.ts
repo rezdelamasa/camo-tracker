@@ -169,7 +169,6 @@ export const useDataStore = defineStore('counter', () => {
     currentCamo.progress.count.current++;
 
     if(currentCamo.progress.count.current === currentCamo.progress.count.completion) {
-      console.log("increment currentCamo", currentCamo)
       updateCamoComplete(currentCamo);
       return;
     };
