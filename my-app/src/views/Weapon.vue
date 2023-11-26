@@ -44,7 +44,7 @@
       >
         <v-expansion-panels
           v-model="panels"
-          multiple
+          multiple="true"
         >
           <v-expansion-panel
               class="bg-transparent"
