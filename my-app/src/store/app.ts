@@ -11,6 +11,16 @@ export const useDataStore = defineStore('counter', () => {
   })
   const data:Object = ref(mock.data)
 
+  // GETTER for current weapon camos
+  const weaponCamos = computed(() => {
+    if(route.params.weapon) {
+      return data.value.camos.filter((camo) =>
+        camo.weaponId == currentWeapon.value.id
+      )
+    }
+    return [];
+  })
+
   const currentClass = computed(() => {
     return data.value.classes.find((dataClass) =>
         dataClass.slug === routeParams.value.weaponClass
@@ -31,15 +41,10 @@ export const useDataStore = defineStore('counter', () => {
       weapon.classId === currentClass.value.id
     )
 
-    console.log(classWeapons)
-
     classWeapons.forEach((weapon) => {
-      console.log(weapon.camos);
       const gildedChallenge = weapon.camos.find((camo) =>
         camo.name === "Gilded"
       );
-
-      console.log("gildedChallenge", gildedChallenge)
 
       if(gildedChallenge.progress.status === "Complete") {
         gildedProgress++;
@@ -55,11 +60,9 @@ export const useDataStore = defineStore('counter', () => {
       dataClass.slug === routeParams.value.weaponClass
     )
 
-    const classWeapons = data.value.weapons.filter((weapon) =>
+    return data.value.weapons.filter((weapon) =>
       weapon.classId === currentClass.id
     )
-
-    return classWeapons;
   })
 
   const currentWeapon = computed(() => {
@@ -87,13 +90,13 @@ export const useDataStore = defineStore('counter', () => {
   })
 
   const baseCamos = computed(() => {
-    return currentWeapon.value.camos.filter((camo) =>
+    return weaponCamos.value.filter((camo) =>
       camo.type === "Base"
     )
   })
 
   const masteryCamos = computed(() => {
-    return currentWeapon.value.camos.filter((camo) =>
+    return weaponCamos.value.filter((camo) =>
         camo.type === "Mastery"
     )
   })
@@ -102,25 +105,23 @@ export const useDataStore = defineStore('counter', () => {
 
     currentCamo.progress.status = "Complete";
 
-    const target = currentWeapon.value.camos.find((camo) => camo.name === currentCamo.name);
+    const target = weaponCamos.value.find((camo) => camo.name === currentCamo.name);
 
     Object.assign(target, currentCamo);
 
     queueNextInProgress(currentCamo);
   }
 
-  function queueNextInProgress(currentCamo) {
-    const baseCompletionCount = currentWeapon.value.camos.filter((camo) =>
+  function queueNextInProgress() {
+    const baseCompletionCount = weaponCamos.value.filter((camo) =>
       camo.type === "Base" && camo.progress.status === "Complete"
     ).length;
 
-    let nextLocked = currentWeapon.value.camos.find((camo) =>
+    let nextLocked = weaponCamos.value.find((camo) =>
         camo.progress.status === "Locked"
     )
 
     if(!nextLocked) return;
-
-    console.log(baseCompletionCount);
 
     if(baseCompletionCount === 4) {
     //    then continue to gilded
@@ -143,7 +144,7 @@ export const useDataStore = defineStore('counter', () => {
 
     if(currentCamo.progress.count.current === 0) {
       return;
-    };
+    }
 
     currentCamo.progress.count.current--;
 
@@ -161,15 +162,14 @@ export const useDataStore = defineStore('counter', () => {
   function increment(currentCamo) {
     if(currentCamo.progress.count.current === currentCamo.progress.count.completion) {
       return;
-    };
+    }
 
     currentCamo.progress.count.current++;
 
     if(currentCamo.progress.count.current === currentCamo.progress.count.completion) {
-      console.log("increment currentCamo", currentCamo)
       updateCamoComplete(currentCamo);
       return;
-    };
+    }
 
     const target = currentWeapon.value.camos.find((camo) => camo.name === currentCamo.name);
 
@@ -180,12 +180,13 @@ export const useDataStore = defineStore('counter', () => {
 
     currentCamo.progress.count.current = currentCamo.progress.count.completion;
 
-    const target = currentWeapon.value.camos.find((camo) => camo.name === currentCamo.name);
+    const target = weaponCamos.value.find((camo) => camo.name === currentCamo.name);
 
     Object.assign(target, currentCamo);
 
     updateCamoComplete(currentCamo);
   }
 
-  return { data, decrement, increment, complete, storeInProgress, storeComplete, storeLocked, currentClassWeapons, currentWeapon, currentClass, baseCamos, masteryCamos, currentWeaponGildedComplete, currentClassGildedProgress }
+  return { data, decrement, increment, complete, storeInProgress, storeComplete, storeLocked, currentClassWeapons, currentWeapon, currentClass, baseCamos, masteryCamos, currentWeaponGildedComplete, currentClassGildedProgress,
+    weaponCamos }
 })

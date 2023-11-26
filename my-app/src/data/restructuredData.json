@@ -130,105 +130,7 @@
         "progress": 0,
         "slug": "sva",
         "image": "/mw3-loadout-sva-545-1-removebg-preview.png",
-        "description": "This weapon system fires the first two rounds nearly at the same time, making this an incredibly lethal weapon in careful hands.",
-        "camos": [
-          {
-            "name": "Blue Tones",
-            "challenge": "Get 50 Kills",
-            "type": "Base",
-            "progress": {
-              "status": "Complete",
-              "count": {
-                "completion": 50,
-                "current": 50
-              }
-            }
-          },
-          {
-            "name": "Topo Muddy",
-            "challenge": "Get 50 Kills while ADS",
-            "type": "Base",
-            "progress": {
-              "status": "Complete",
-              "count": {
-                "completion": 50,
-                "current": 50
-              }
-            }
-          },
-          {
-            "name": "Cinders",
-            "challenge": "Get 15 Headshot Kills",
-            "type": "Base",
-            "progress": {
-              "status": "Complete",
-              "count": {
-                "completion": 15,
-                "current": 15
-              }
-            }
-          },
-          {
-            "name": "Monarch",
-            "challenge": "Get 25 kills while in Tac Stance",
-            "type": "Base",
-            "progress": {
-              "status": "Complete",
-              "count": {
-                "completion": 25,
-                "current": 25
-              }
-            }
-          },
-          {
-            "name": "Gilded",
-            "challenge": "Get three kills with one mag 10 times",
-            "type": "Mastery",
-            "progress": {
-              "status": "In Progress",
-              "count": {
-                "completion": 10,
-                "current": 3
-              }
-            }
-          },
-          {
-            "name": "Forged",
-            "challenge": "Get 25 multikills",
-            "type": "Mastery",
-            "progress": {
-              "status": "Locked",
-              "count": {
-                "completion": 25,
-                "current": 0
-              }
-            }
-          },
-          {
-            "name": "Priceless",
-            "challenge": "Get 15 headshots with a magnification scope",
-            "type": "Mastery",
-            "progress": {
-              "status": "Locked",
-              "count": {
-                "completion": 15,
-                "current": 0
-              }
-            }
-          },
-          {
-            "name": "Interstellar",
-            "challenge": "Complete 36 Priceless camo challenges",
-            "type": "Mastery",
-            "progress": {
-              "status": "Locked",
-              "count": {
-                "completion": 36,
-                "current": 0
-              }
-            }
-          }
-        ]
+        "description": "This weapon system fires the first two rounds nearly at the same time, making this an incredibly lethal weapon in careful hands."
       },
       {
         "id": "mtz",
@@ -237,113 +139,265 @@
         "progress": 0,
         "slug": "mtz",
         "image": "/mw3-loadout-sva-545-1-removebg-preview.png",
-        "description": "This weapon system fires the first two rounds nearly at the same time, making this an incredibly lethal weapon in careful hands.",
-        "camos": [
-          {
-            "name": "Blue Tones",
-            "challenge": "Get 50 Kills",
-            "level": 2,
-            "type": "Base",
-            "progress": {
-              "status": "Complete",
-              "count": {
-                "completion": 50,
-                "current": 50
-              }
-            }
-          },
-          {
-            "name": "Topo Muddy",
-            "challenge": "Get 50 Kills while ADS",
-            "level": 13,
-            "type": "Base",
-            "progress": {
-              "status": "Complete",
-              "count": {
-                "completion": 50,
-                "current": 50
-              }
-            }
-          },
-          {
-            "name": "Cinders",
-            "challenge": "Get 15 Headshot Kills",
-            "level": 20,
-            "type": "Base",
-            "progress": {
-              "status": "In Progress",
-              "count": {
-                "completion": 15,
-                "current": 8
-              }
-            }
-          },
-          {
-            "name": "Monarch",
-            "challenge": "Get 25 kills while in Tac Stance",
-            "level": 30,
-            "type": "Base",
-            "progress": {
-              "status": "In Progress",
-              "count": {
-                "completion": 25,
-                "current": 5
-              }
-            }
-          },
-          {
-            "name": "Gilded",
-            "challenge": "Get three kills with one mag 10 times",
-            "type": "Mastery",
-            "progress": {
-              "status": "Locked",
-              "statusReason": "Must complete Base Camo Challenges for this weapon",
-              "count": {
-                "completion": 10,
-                "current": 0
-              }
-            }
-          },
-          {
-            "name": "Forged",
-            "challenge": "Get 25 multikills",
-            "type": "Mastery",
-            "progress": {
-              "status": "Locked",
-              "statusReason": "Must complete Gilded Challenges for all weapons in class",
-              "count": {
-                "completion": 25,
-                "current": 0
-              }
-            }
-          },
-          {
-            "name": "Priceless",
-            "challenge": "Get 15 headshots with a magnification scope",
-            "type": "Mastery",
-            "progress": {
-              "status": "Locked",
-              "statusReason": "Must complete Forged Challenges for all weapons",
-              "count": {
-                "completion": 15,
-                "current": 0
-              }
-            }
-          },
-          {
-            "name": "Interstellar",
-            "challenge": "Complete 36 Priceless camo challenges",
-            "type": "Mastery",
-            "progress": {
-              "status": "Locked",
-              "statusReason": "Must complete Priceless Challenges for all weapons",
-              "count": {
-                "completion": 36,
-                "current": 0
-              }
-            }
+        "description": "This weapon system fires the first two rounds nearly at the same time, making this an incredibly lethal weapon in careful hands."
+      }
+    ],
+    "camos": [
+      {
+        "id": "blue-tones",
+        "weaponId": "sva",
+        "classId": "assault",
+        "name": "Blue Tones",
+        "challenge": "Get 50 Kills",
+        "level": 2,
+        "type": "Base",
+        "progress": {
+          "status": "Complete",
+          "count": {
+            "completion": 50,
+            "current": 50
           }
-        ]
+        }
+      },
+      {
+        "id": "topo-muddy",
+        "weaponId": "sva",
+        "classId": "assault",
+        "name": "Topo Muddy",
+        "challenge": "Get 50 Kills while ADS",
+        "level": 13,
+        "type": "Base",
+        "progress": {
+          "status": "Complete",
+          "count": {
+            "completion": 50,
+            "current": 50
+          }
+        }
+      },
+      {
+        "id": "cinders",
+        "weaponId": "sva",
+        "classId": "assault",
+        "name": "Cinders",
+        "challenge": "Get 15 Headshot Kills",
+        "level": 20,
+        "type": "Base",
+        "progress": {
+          "status": "In Progress",
+          "count": {
+            "completion": 15,
+            "current": 8
+          }
+        }
+      },
+      {
+        "id": "monarch",
+        "weaponId": "sva",
+        "classId": "assault",
+        "name": "Monarch",
+        "challenge": "Get 25 kills while in Tac Stance",
+        "level": 30,
+        "type": "Base",
+        "progress": {
+          "status": "In Progress",
+          "count": {
+            "completion": 25,
+            "current": 5
+          }
+        }
+      },
+      {
+        "id": "sva-gilded",
+        "weaponId": "sva",
+        "classId": "assault",
+        "name": "Gilded",
+        "challenge": "Get three kills with one mag 10 times",
+        "type": "Mastery",
+        "progress": {
+          "status": "Locked",
+          "statusReason": "Must complete Base Camo Challenges for this weapon",
+          "count": {
+            "completion": 10,
+            "current": 0
+          }
+        }
+      },
+      {
+        "id": "sva-forged",
+        "weaponId": "sva",
+        "classId": "assault",
+        "name": "Forged",
+        "challenge": "Get 25 multikills",
+        "type": "Mastery",
+        "progress": {
+          "status": "Locked",
+          "statusReason": "Must complete Gilded Challenges for all weapons in class",
+          "count": {
+            "completion": 25,
+            "current": 0
+          }
+        }
+      },
+      {
+        "id": "sva-priceless",
+        "weaponId": "sva",
+        "classId": "assault",
+        "name": "Priceless",
+        "challenge": "Get 15 headshots with a magnification scope",
+        "type": "Mastery",
+        "progress": {
+          "status": "Locked",
+          "statusReason": "Must complete Forged Challenges for all weapons",
+          "count": {
+            "completion": 15,
+            "current": 0
+          }
+        }
+      },
+      {
+        "id": "sva-interstellar",
+        "weaponId": "sva",
+        "classId": "assault",
+        "name": "Interstellar",
+        "challenge": "Complete 36 Priceless camo challenges",
+        "type": "Mastery",
+        "progress": {
+          "status": "Locked",
+          "statusReason": "Must complete Priceless Challenges for all weapons",
+          "count": {
+            "completion": 36,
+            "current": 0
+          }
+        }
+      },
+      {
+        "id": "orange-tones",
+        "weaponId": "mtz",
+        "classId": "assault",
+        "name": "Orange Tones",
+        "challenge": "Get 50 Kills",
+        "level": 2,
+        "type": "Base",
+        "progress": {
+          "status": "Complete",
+          "count": {
+            "completion": 50,
+            "current": 50
+          }
+        }
+      },
+      {
+        "id": "iris-glitch",
+        "weaponId": "mtz",
+        "classId": "assault",
+        "name": "Iris Glitch",
+        "challenge": "Get 50 Kills while ADS",
+        "level": 11,
+        "type": "Base",
+        "progress": {
+          "status": "Complete",
+          "count": {
+            "completion": 50,
+            "current": 50
+          }
+        }
+      },
+      {
+        "id": "germ-factory",
+        "weaponId": "mtz",
+        "classId": "assault",
+        "name": "Germ Factory",
+        "challenge": "Get 15 Headshot Kills",
+        "level": 17,
+        "type": "Base",
+        "progress": {
+          "status": "In Progress",
+          "count": {
+            "completion": 15,
+            "current": 8
+          }
+        }
+      },
+      {
+        "id": "purple",
+        "weaponId": "mtz",
+        "classId": "assault",
+        "name": "Purple",
+        "challenge": "Get 25 kills while in Tac Stance",
+        "level": 26,
+        "type": "Base",
+        "progress": {
+          "status": "In Progress",
+          "count": {
+            "completion": 25,
+            "current": 5
+          }
+        }
+      },
+      {
+        "id": "mtz-gilded",
+        "weaponId": "mtz",
+        "classId": "assault",
+        "name": "Gilded",
+        "challenge": "Get 3 operator kills with 1 magazine 10 times",
+        "type": "Mastery",
+        "progress": {
+          "status": "Locked",
+          "statusReason": "Must complete Base Camo Challenges for this weapon",
+          "count": {
+            "completion": 10,
+            "current": 0
+          }
+        }
+      },
+      {
+        "id": "mtz-forged",
+        "weaponId": "mtz",
+        "classId": "assault",
+        "name": "Forged",
+        "challenge": "Get 10 kills while moving in tac-stance",
+        "type": "Mastery",
+        "progress": {
+          "status": "Locked",
+          "statusReason": "Must complete Gilded Challenges for all weapons in class",
+          "count": {
+            "completion": 25,
+            "current": 0
+          }
+        }
+      },
+      {
+        "id": "mtz-priceless",
+        "weaponId": "mtz",
+        "classId": "assault",
+        "name": "Priceless",
+        "challenge": "Get 10 enemies affected by your tactical while in Tac Stance",
+        "type": "Mastery",
+        "progress": {
+          "status": "Locked",
+          "statusReason": "Must complete Forged Challenges for all weapons",
+          "count": {
+            "completion": 15,
+            "current": 0
+          }
+        }
+      },
+      {
+        "id": "mtz-interstellar",
+        "weaponId": "mtz",
+        "classId": "assault",
+        "name": "Interstellar",
+        "challenge": "Complete 36 Priceless Camo Challenges",
+        "type": "Mastery",
+        "progress": {
+          "status": "Locked",
+          "statusReason": "Must complete Priceless Challenges for all weapons",
+          "count": {
+            "completion": 36,
+            "current": 0
+          }
+        }
       }
     ]
   }
