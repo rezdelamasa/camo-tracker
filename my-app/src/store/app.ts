@@ -42,24 +42,7 @@ export const useDataStore = defineStore('counter', () => {
     )
   })
 
-  const storeInProgress = computed(() => {
-    return currentWeapon.value.camos.filter((camo) =>
-      camo.progress.status === "In Progress"
-    )
-  })
-
-  const storeComplete = computed(() => {
-    return currentWeapon.value.camos.filter((camo) =>
-        camo.progress.status === "Complete"
-    )
-  })
-
-  const storeLocked = computed(() => {
-    return currentWeapon.value.camos.filter((camo) =>
-        camo.progress.status === "Locked"
-    )
-  })
-
+  // GETTER for current weapon's base camos
   const baseCamos = computed(() => {
     return weaponCamos.value.filter((camo) =>
       camo.type === "Base"
