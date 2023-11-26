@@ -144,7 +144,7 @@ export const useDataStore = defineStore('counter', () => {
 
     if(currentCamo.progress.count.current === 0) {
       return;
-    };
+    }
 
     currentCamo.progress.count.current--;
 
@@ -162,14 +162,14 @@ export const useDataStore = defineStore('counter', () => {
   function increment(currentCamo) {
     if(currentCamo.progress.count.current === currentCamo.progress.count.completion) {
       return;
-    };
+    }
 
     currentCamo.progress.count.current++;
 
     if(currentCamo.progress.count.current === currentCamo.progress.count.completion) {
       updateCamoComplete(currentCamo);
       return;
-    };
+    }
 
     const target = currentWeapon.value.camos.find((camo) => camo.name === currentCamo.name);
 
