@@ -41,15 +41,10 @@ export const useDataStore = defineStore('counter', () => {
       weapon.classId === currentClass.value.id
     )
 
-    console.log(classWeapons)
-
     classWeapons.forEach((weapon) => {
-      console.log(weapon.camos);
       const gildedChallenge = weapon.camos.find((camo) =>
         camo.name === "Gilded"
       );
-
-      console.log("gildedChallenge", gildedChallenge)
 
       if(gildedChallenge.progress.status === "Complete") {
         gildedProgress++;
