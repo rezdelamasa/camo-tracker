@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d625be6d-eea0-4229-9f10-cfc1c9fdc8ea" name="Changes" comment="fix: multiple requires boolean">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/store/app.ts" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/store/app.ts" afterDir="false" />
-    </list>
+    <list default="true" id="d625be6d-eea0-4229-9f10-cfc1c9fdc8ea" name="Changes" comment="update" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -142,7 +139,71 @@
       <option name="project" value="LOCAL" />
       <updated>1701027923966</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="chore: comments">
+      <option name="closed" value="true" />
+      <created>1701034801545</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1701034801545</updated>
+    </task>
+    <task id="LOCAL-00005" summary="chore: clean">
+      <option name="closed" value="true" />
+      <created>1701034839303</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1701034839303</updated>
+    </task>
+    <task id="LOCAL-00006" summary="chore: comment and and delete unused getters">
+      <option name="closed" value="true" />
+      <created>1701034895292</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1701034895292</updated>
+    </task>
+    <task id="LOCAL-00007" summary="fix: clean up and refactor">
+      <option name="closed" value="true" />
+      <created>1701034914250</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1701034914250</updated>
+    </task>
+    <task id="LOCAL-00008" summary="chore: comment and delete unnecessary getters">
+      <option name="closed" value="true" />
+      <created>1701034939037</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1701034939037</updated>
+    </task>
+    <task id="LOCAL-00009" summary="chore: refactor">
+      <option name="closed" value="true" />
+      <created>1701035173374</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1701035173374</updated>
+    </task>
+    <task id="LOCAL-00010" summary="chore: clean up exports">
+      <option name="closed" value="true" />
+      <created>1701035182031</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1701035182032</updated>
+    </task>
+    <task id="LOCAL-00011" summary="update">
+      <option name="closed" value="true" />
+      <created>1701035195256</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1701035195256</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -152,6 +213,14 @@
     <MESSAGE value="Init: Basic UI set up with local mock data" />
     <MESSAGE value="stuff" />
     <MESSAGE value="fix: multiple requires boolean" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: multiple requires boolean" />
+    <MESSAGE value="chore: comments" />
+    <MESSAGE value="chore: clean" />
+    <MESSAGE value="chore: comment and and delete unused getters" />
+    <MESSAGE value="fix: clean up and refactor" />
+    <MESSAGE value="chore: comment and delete unnecessary getters" />
+    <MESSAGE value="chore: refactor" />
+    <MESSAGE value="chore: clean up exports" />
+    <MESSAGE value="update" />
+    <option name="LAST_COMMIT_MESSAGE" value="update" />
   </component>
 </project>
