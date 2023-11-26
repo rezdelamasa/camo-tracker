@@ -2,7 +2,7 @@
   import { useDataStore } from '@/store/app'
   import {computed, ref} from "vue";
   import {useRoute} from "vue-router";
-  import ProgressCard from "@/components/ProgressCard.vue";
+  import CamoCard from "@/components/CamoCard.vue";
 
   const dataStore = useDataStore();
 
@@ -57,13 +57,13 @@
                   cols="12"
                   v-for="camo in dataStore.baseCamos"
                 >
-                  <progress-card
+                  <camo-card
                       :weapon="dataStore.currentWeapon"
                       :camo="camo"
                       @decrement="(inProgressCamo) => handleDecrement(inProgressCamo)"
                       @increment="(inProgressCamo) => handleIncrement(inProgressCamo)"
                       @complete="(inProgressCamo) => handleComplete(inProgressCamo)"
-                  ></progress-card>
+                  ></camo-card>
                 </v-col>
               </v-row>
             </v-expansion-panel-text>
@@ -79,13 +79,13 @@
                     cols="12"
                     v-for="camo in dataStore.masteryCamos"
                 >
-                  <progress-card
+                  <camo-card
                       :weapon="dataStore.currentWeapon"
                       :camo="camo"
                       @decrement="(inProgressCamo) => handleDecrement(inProgressCamo)"
                       @increment="(inProgressCamo) => handleIncrement(inProgressCamo)"
                       @complete="(inProgressCamo) => handleComplete(inProgressCamo)"
-                  ></progress-card>
+                  ></camo-card>
                 </v-col>
               </v-row>
             </v-expansion-panel-text>
