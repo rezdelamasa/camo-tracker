@@ -112,7 +112,7 @@ export const useDataStore = defineStore('counter', () => {
     queueNextInProgress(currentCamo);
   }
 
-  function queueNextInProgress(currentCamo) {
+  function queueNextInProgress() {
     const baseCompletionCount = weaponCamos.value.filter((camo) =>
       camo.type === "Base" && camo.progress.status === "Complete"
     ).length;
