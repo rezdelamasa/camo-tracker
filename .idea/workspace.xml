@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d625be6d-eea0-4229-9f10-cfc1c9fdc8ea" name="Changes" comment="Init: Basic UI set up with local mock data">
+    <list default="true" id="d625be6d-eea0-4229-9f10-cfc1c9fdc8ea" name="Changes" comment="fix: multiple requires boolean">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/store/app.ts" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/store/app.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,7 +126,23 @@
       <option name="project" value="LOCAL" />
       <updated>1700947665684</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="stuff">
+      <option name="closed" value="true" />
+      <created>1701027897157</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1701027897157</updated>
+    </task>
+    <task id="LOCAL-00003" summary="fix: multiple requires boolean">
+      <option name="closed" value="true" />
+      <created>1701027923966</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1701027923966</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -134,6 +150,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Init: Basic UI set up with local mock data" />
-    <option name="LAST_COMMIT_MESSAGE" value="Init: Basic UI set up with local mock data" />
+    <MESSAGE value="stuff" />
+    <MESSAGE value="fix: multiple requires boolean" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: multiple requires boolean" />
   </component>
 </project>
