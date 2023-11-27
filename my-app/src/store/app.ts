@@ -100,10 +100,21 @@ export const useDataStore = defineStore('counter', () => {
     currentCamo.progress.status = "Complete";
 
     const target = weaponCamos.value.find((camo) => camo.name === currentCamo.name);
+    if(currentCamo.name === "Gilded") {
+      queueForged();
+    } else {
+      queueNextInProgress();
+    }
+  }
 
     Object.assign(target, currentCamo);
 
     queueNextInProgress(currentCamo);
+  function queueForged() {
+    if(!allClassWeaponsGilded.value) return;
+    getClassForgedCamos.value.forEach((camo) => {
+      camo.progress.status === "In Progress"
+    })
   }
 
   // GETTER boolean if all weapons in class are gilded
