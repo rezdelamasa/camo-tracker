@@ -1,6 +1,5 @@
 <script lang="ts" setup>
   import WeaponCard from "@/components/WeaponCard.vue";
-  import data from "@/data/data.json"
   import {computed, ref} from "vue";
   import {useRoute} from "vue-router";
 
