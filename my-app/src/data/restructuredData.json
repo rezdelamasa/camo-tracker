@@ -434,6 +434,518 @@
             "current": 0
           }
         }
+      },
+      {
+        "id": "fractal-dirt",
+        "weaponId": "holger",
+        "classId": "assault",
+        "name": "Fractal Dirt",
+        "challenge": "Get 50 Operator Kills",
+        "level": 2,
+        "type": "Base",
+        "progress": {
+          "status": "Complete",
+          "count": {
+            "completion": 50,
+            "current": 50
+          }
+        }
+      },
+      {
+        "id": "topo-glitch",
+        "weaponId": "holger",
+        "classId": "assault",
+        "name": "Topo Glitch",
+        "challenge": "Get 50 Kills while ADS",
+        "level": 10,
+        "type": "Base",
+        "progress": {
+          "status": "Complete",
+          "count": {
+            "completion": 50,
+            "current": 50
+          }
+        }
+      },
+      {
+        "id": "palette-rosemary",
+        "weaponId": "holger",
+        "classId": "assault",
+        "name": "Palette Rosemary",
+        "challenge": "Get 15 Headshot Kills",
+        "level": 16,
+        "type": "Base",
+        "progress": {
+          "status": "Complete",
+          "count": {
+            "completion": 15,
+            "current": 15
+          }
+        }
+      },
+      {
+        "id": "magma-heat",
+        "weaponId": "holger",
+        "classId": "assault",
+        "name": "Magma Heat",
+        "challenge": "Get 25 kills while in Tac Stance",
+        "level": 24,
+        "type": "Base",
+        "progress": {
+          "status": "Complete",
+          "count": {
+            "completion": 25,
+            "current": 25
+          }
+        }
+      },
+      {
+        "id": "holger-gilded",
+        "weaponId": "holger",
+        "classId": "assault",
+        "name": "Gilded",
+        "challenge": "Get 3 operator kills with 1 magazine 10 times",
+        "type": "Mastery",
+        "progress": {
+          "status": "Complete",
+          "statusReason": null,
+          "count": {
+            "completion": 10,
+            "current": 10
+          }
+        }
+      },
+      {
+        "id": "holger-forged",
+        "weaponId": "holger",
+        "classId": "assault",
+        "name": "Forged",
+        "challenge": "Get 25 kills with an underbarrel attachment",
+        "type": "Mastery",
+        "progress": {
+          "status": "Locked",
+          "statusReason": "Must complete Gilded Challenges for all weapons in class",
+          "count": {
+            "completion": 10,
+            "current": 0
+          }
+        }
+      },
+      {
+        "id": "holger-priceless",
+        "weaponId": "holger",
+        "classId": "assault",
+        "name": "Priceless",
+        "challenge": "Get 15 longshot kills while mounted",
+        "type": "Mastery",
+        "progress": {
+          "status": "Locked",
+          "statusReason": "Must complete Forged Challenges for all weapons",
+          "count": {
+            "completion": 15,
+            "current": 0
+          }
+        }
+      },
+      {
+        "id": "holger-interstellar",
+        "weaponId": "holger",
+        "classId": "assault",
+        "name": "Interstellar",
+        "challenge": "Complete 36 Priceless Camo Challenges",
+        "type": "Mastery",
+        "progress": {
+          "status": "Locked",
+          "statusReason": "Must complete Priceless Challenges for all weapons",
+          "count": {
+            "completion": 36,
+            "current": 0
+          }
+        }
+      },
+      {
+        "id": "razor-feather",
+        "weaponId": "mcw",
+        "classId": "assault",
+        "name": "Razor Feather",
+        "challenge": "Get 50 Operator Kills",
+        "level": 2,
+        "type": "Base",
+        "progress": {
+          "status": "Complete",
+          "count": {
+            "completion": 50,
+            "current": 50
+          }
+        }
+      },
+      {
+        "id": "skullflagration",
+        "weaponId": "mcw",
+        "classId": "assault",
+        "name": "Skullflagration",
+        "challenge": "Get 50 Kills while ADS",
+        "level": 12,
+        "type": "Base",
+        "progress": {
+          "status": "Complete",
+          "count": {
+            "completion": 50,
+            "current": 50
+          }
+        }
+      },
+      {
+        "id": "abyssal-fox",
+        "weaponId": "mcw",
+        "classId": "assault",
+        "name": "Abyssal Fox",
+        "challenge": "Get 15 Headshot Kills",
+        "level": 19,
+        "type": "Base",
+        "progress": {
+          "status": "Complete",
+          "count": {
+            "completion": 15,
+            "current": 15
+          }
+        }
+      },
+      {
+        "id": "menelaus-blue",
+        "weaponId": "mcw",
+        "classId": "assault",
+        "name": "Menelaus Blue",
+        "challenge": "Get 25 kills while in Tac Stance",
+        "level": 28,
+        "type": "Base",
+        "progress": {
+          "status": "Complete",
+          "count": {
+            "completion": 25,
+            "current": 25
+          }
+        }
+      },
+      {
+        "id": "mcw-gilded",
+        "weaponId": "mcw",
+        "classId": "assault",
+        "name": "Gilded",
+        "challenge": "Get 3 operator kills with 1 magazine 10 times",
+        "type": "Mastery",
+        "progress": {
+          "status": "Complete",
+          "statusReason": null,
+          "count": {
+            "completion": 10,
+            "current": 10
+          }
+        }
+      },
+      {
+        "id": "mcw-forged",
+        "weaponId": "mcw",
+        "classId": "assault",
+        "name": "Forged",
+        "challenge": "Get 3 kills without dying 10 times",
+        "type": "Mastery",
+        "progress": {
+          "status": "Locked",
+          "statusReason": "Must complete Gilded Challenges for all weapons in class",
+          "count": {
+            "completion": 10,
+            "current": 0
+          }
+        }
+      },
+      {
+        "id": "mcw-priceless",
+        "weaponId": "mcw",
+        "classId": "assault",
+        "name": "Priceless",
+        "challenge": "Get 5 kills without dying 10 times",
+        "type": "Mastery",
+        "progress": {
+          "status": "Locked",
+          "statusReason": "Must complete Forged Challenges for all weapons",
+          "count": {
+            "completion": 15,
+            "current": 0
+          }
+        }
+      },
+      {
+        "id": "mcw-interstellar",
+        "weaponId": "mcw",
+        "classId": "assault",
+        "name": "Interstellar",
+        "challenge": "Complete 36 Priceless Camo Challenges",
+        "type": "Mastery",
+        "progress": {
+          "status": "Locked",
+          "statusReason": "Must complete Priceless Challenges for all weapons",
+          "count": {
+            "completion": 36,
+            "current": 0
+          }
+        }
+      },
+      {
+        "id": "heat-map",
+        "weaponId": "dg-58",
+        "classId": "assault",
+        "name": "Heat Map",
+        "challenge": "Get 50 Operator Kills",
+        "level": 2,
+        "type": "Base",
+        "progress": {
+          "status": "Complete",
+          "count": {
+            "completion": 50,
+            "current": 50
+          }
+        }
+      },
+      {
+        "id": "creeplines",
+        "weaponId": "dg-58",
+        "classId": "assault",
+        "name": "Creeplines",
+        "challenge": "Get 50 Kills while ADS",
+        "level": 11,
+        "type": "Base",
+        "progress": {
+          "status": "In Progress",
+          "count": {
+            "completion": 50,
+            "current": 25
+          }
+        }
+      },
+      {
+        "id": "twilight-glitch",
+        "weaponId": "dg-58",
+        "classId": "assault",
+        "name": "Twilight Glitch",
+        "challenge": "Get 15 Headshot Kills",
+        "level": 17,
+        "type": "Base",
+        "progress": {
+          "status": "In Progress",
+          "count": {
+            "completion": 15,
+            "current": 2
+          }
+        }
+      },
+      {
+        "id": "oakleaf",
+        "weaponId": "dg-58",
+        "classId": "assault",
+        "name": "Oakleaf",
+        "challenge": "Get 25 kills while in Tac Stance",
+        "level": 28,
+        "type": "Base",
+        "progress": {
+          "status": "In Progress",
+          "count": {
+            "completion": 25,
+            "current": 0
+          }
+        }
+      },
+      {
+        "id": "dg-58-gilded",
+        "weaponId": "dg-58",
+        "classId": "assault",
+        "name": "Gilded",
+        "challenge": "Get 3 operator kills with 1 magazine 10 times",
+        "type": "Mastery",
+        "progress": {
+          "status": "Locked",
+          "statusReason": "Must complete all Base Camo challenges for this weapon",
+          "count": {
+            "completion": 10,
+            "current": 0
+          }
+        }
+      },
+      {
+        "id": "dg-58-forged",
+        "weaponId": "dg-58",
+        "classId": "assault",
+        "name": "Forged",
+        "challenge": "Get 10 kills while ADS and strafing",
+        "type": "Mastery",
+        "progress": {
+          "status": "Locked",
+          "statusReason": "Must complete Gilded Challenges for all weapons in class",
+          "count": {
+            "completion": 10,
+            "current": 0
+          }
+        }
+      },
+      {
+        "id": "dg-58-priceless",
+        "weaponId": "dg-58",
+        "classId": "assault",
+        "name": "Priceless",
+        "challenge": "Get 10 burst kills",
+        "type": "Mastery",
+        "progress": {
+          "status": "Locked",
+          "statusReason": "Must complete Forged Challenges for all weapons",
+          "count": {
+            "completion": 15,
+            "current": 0
+          }
+        }
+      },
+      {
+        "id": "dg-58-interstellar",
+        "weaponId": "dg-58",
+        "classId": "assault",
+        "name": "Interstellar",
+        "challenge": "Complete 36 Priceless Camo Challenges",
+        "type": "Mastery",
+        "progress": {
+          "status": "Locked",
+          "statusReason": "Must complete Priceless Challenges for all weapons",
+          "count": {
+            "completion": 36,
+            "current": 0
+          }
+        }
+      },
+      {
+        "id": "get-snowy",
+        "weaponId": "fr556",
+        "classId": "assault",
+        "name": "Get Snowy",
+        "challenge": "Get 50 Operator Kills",
+        "level": 2,
+        "type": "Base",
+        "progress": {
+          "status": "In Progress",
+          "count": {
+            "completion": 50,
+            "current": 38
+          }
+        }
+      },
+      {
+        "id": "digital-bloodbath",
+        "weaponId": "fr556",
+        "classId": "assault",
+        "name": "Digital Bloodbath",
+        "challenge": "Get 50 Kills while ADS",
+        "level": 8,
+        "type": "Base",
+        "progress": {
+          "status": "In Progress",
+          "count": {
+            "completion": 50,
+            "current": 12
+          }
+        }
+      },
+      {
+        "id": "nightshade",
+        "weaponId": "fr556",
+        "classId": "assault",
+        "name": "Nightshade",
+        "challenge": "Get 15 Headshot Kills",
+        "level": 13,
+        "type": "Base",
+        "progress": {
+          "status": "In Progress",
+          "count": {
+            "completion": 15,
+            "current": 0
+          }
+        }
+      },
+      {
+        "id": "tiger-blood",
+        "weaponId": "fr556",
+        "classId": "assault",
+        "name": "Tiger Blood",
+        "challenge": "Get 25 kills while in Tac Stance",
+        "level": 19,
+        "type": "Base",
+        "progress": {
+          "status": "In Progress",
+          "count": {
+            "completion": 25,
+            "current": 0
+          }
+        }
+      },
+      {
+        "id": "fr556-gilded",
+        "weaponId": "fr556",
+        "classId": "assault",
+        "name": "Gilded",
+        "challenge": "Get 3 operator kills with 1 magazine 10 times",
+        "type": "Mastery",
+        "progress": {
+          "status": "Locked",
+          "statusReason": "Must complete all Base Camo challenges for this weapon",
+          "count": {
+            "completion": 10,
+            "current": 0
+          }
+        }
+      },
+      {
+        "id": "fr556-forged",
+        "weaponId": "fr556",
+        "classId": "assault",
+        "name": "Forged",
+        "challenge": "Get 20 operator 1 burst kills",
+        "type": "Mastery",
+        "progress": {
+          "status": "Locked",
+          "statusReason": "Must complete Gilded Challenges for all weapons in class",
+          "count": {
+            "completion": 10,
+            "current": 0
+          }
+        }
+      },
+      {
+        "id": "fr556-priceless",
+        "weaponId": "fr556",
+        "classId": "assault",
+        "name": "Priceless",
+        "challenge": "Get 15 headshot kills with a magnification scope",
+        "type": "Mastery",
+        "progress": {
+          "status": "Locked",
+          "statusReason": "Must complete Forged Challenges for all weapons",
+          "count": {
+            "completion": 15,
+            "current": 0
+          }
+        }
+      },
+      {
+        "id": "fr556-interstellar",
+        "weaponId": "fr556",
+        "classId": "assault",
+        "name": "Interstellar",
+        "challenge": "Complete 36 Priceless Camo Challenges",
+        "type": "Mastery",
+        "progress": {
+          "status": "Locked",
+          "statusReason": "Must complete Priceless Challenges for all weapons",
+          "count": {
+            "completion": 36,
+            "current": 0
+          }
+        }
       }
     ]
   }
