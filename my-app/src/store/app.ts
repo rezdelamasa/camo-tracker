@@ -63,16 +63,54 @@ export const useDataStore = defineStore('counter', () => {
     ).length === baseCamos.value.length;
   })
 
+  // function get weapon parameter's camos
+  const getWeaponsCamosForGilded = (weapon) => {
+    return data.value.camos.filter((camo) =>
+      camo.weaponId === weapon.id && (camo.type === "Base" || camo.name === "Gilded")
+    )
+  }
+
+  const getClassForgedCamos = computed(() => {
+    return data.value.camos.filter((camo) =>
+      camo.name === "Forged" && camo.classId === currentClass.value.id
+    )
+  })
+
+  const getWeaponCamo = (weapon, camoString) => {
+    console.log(weapon);
+    console.log(camoString)
+    const foundCamo = data.value.camos.find((camo) =>
+      camo.weaponId === weapon.id && camo.name == camoString
+    )
+
+    console.log(foundCamo)
+    return foundCamo
+  }
+
+  // GETTER for weapon gilded progress
+  const weaponGildedProgress = (weapon) => {
+    return getWeaponsCamosForGilded(weapon).filter((camo) =>
+      camo.progress.status === "Complete"
+    ).length
+  }
+
   // FUNCTION to update current camo progress status to complete
   // Used when incrementing, decrementing, or completing
   function updateCamoComplete(currentCamo) {
     currentCamo.progress.status = "Complete";
 
-    const target = weaponCamos.value.find((camo) => camo.name === currentCamo.name);
+    if(currentCamo.name === "Gilded") {
+      queueForged();
+    } else {
+      queueNextInProgress();
+    }
+  }
 
-    Object.assign(target, currentCamo);
-
-    queueNextInProgress(currentCamo);
+  function queueForged() {
+    if(!allClassWeaponsGilded.value) return;
+    getClassForgedCamos.value.forEach((camo) => {
+      camo.progress.status === "In Progress"
+    })
   }
 
   // GETTER boolean if all weapons in class are gilded
@@ -113,9 +151,8 @@ export const useDataStore = defineStore('counter', () => {
     )
 
     if(!nextLocked) return;
+
     if(nextLocked.name === "Gilded" && !allBaseCamosCompleted.value) return;
-    if(nextLocked.name === "Forged" && !allClassWeaponsGilded.value) return;
-    if(nextLocked.name === "Priceless" && !allWeaponsForged.value) return;
 
     nextLocked.progress.status = "In Progress"
   }
@@ -125,7 +162,7 @@ export const useDataStore = defineStore('counter', () => {
 
     currentCamo.progress.status = "In Progress";
 
-    const target = currentWeapon.value.camos.find((camo) => camo.name === currentCamo.name);
+    const target = weaponCamos.value.find((camo) => camo.name === currentCamo.name);
 
     Object.assign(target, currentCamo);
   }
@@ -145,10 +182,6 @@ export const useDataStore = defineStore('counter', () => {
     ) {
       updateCamoInProgress(currentCamo)
     }
-
-    const target = currentWeapon.value.camos.find((camo) => camo.name === currentCamo.name);
-
-    Object.assign(target, currentCamo);
   }
 
   // ACTION to increment the current camo's progression
@@ -164,10 +197,6 @@ export const useDataStore = defineStore('counter', () => {
       updateCamoComplete(currentCamo);
       return;
     }
-
-    const target = currentWeapon.value.camos.find((camo) => camo.name === currentCamo.name);
-
-    Object.assign(target, currentCamo);
   }
 
   // ACTION to max the current camo's progression
@@ -176,12 +205,8 @@ export const useDataStore = defineStore('counter', () => {
 
     currentCamo.progress.count.current = currentCamo.progress.count.completion;
 
-    const target = weaponCamos.value.find((camo) => camo.name === currentCamo.name);
-
-    Object.assign(target, currentCamo);
-
     updateCamoComplete(currentCamo);
   }
 
-  return { data, decrement, increment, complete, currentClassWeapons, currentWeapon, currentClass, baseCamos, masteryCamos, weaponCamos }
+  return { data, decrement, increment, complete, currentClassWeapons, currentWeapon, currentClass, baseCamos, masteryCamos, weaponCamos, weaponGildedProgress, getWeaponCamo, allClassWeaponsGilded }
 })

@@ -1,7 +1,6 @@
 <script lang="ts" setup>
   import WeaponCard from "@/components/WeaponCard.vue";
-  import data from "@/data/data.json"
-  import {computed, ref} from "vue";
+  import {computed} from "vue";
   import {useRoute} from "vue-router";
 
   import { useDataStore } from '@/store/app'
@@ -13,6 +12,18 @@
     return route.params.weaponClass;
   })
 
+  const handleDecrement = (inProgressCamo) => {
+    dataStore.decrement(inProgressCamo);
+  }
+
+  const handleIncrement = (inProgressCamo) => {
+    dataStore.increment(inProgressCamo);
+  }
+
+  const handleComplete = (inProgressCamo) => {
+    dataStore.complete(inProgressCamo);
+  }
+
 </script>
 <template>
   <v-container>
@@ -23,7 +34,12 @@
         cols="12"
         sm="4"
       >
-        <weapon-card :weapon="weapon"></weapon-card>
+        <weapon-card
+            :weapon="weapon"
+            @decrement="(inProgressCamo) => handleDecrement(inProgressCamo)"
+            @increment="(inProgressCamo) => handleIncrement(inProgressCamo)"
+            @complete="(inProgressCamo) => handleComplete(inProgressCamo)"
+        ></weapon-card>
       </v-col>
     </v-row>
   </v-container>

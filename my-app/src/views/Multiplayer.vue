@@ -1,11 +1,8 @@
 <script lang="ts" setup>
   import ClassCard from "@/components/ClassCard.vue";
-  import {ref} from "vue";
   import { useDataStore } from '@/store/app'
 
   const dataStore = useDataStore();
-
-  console.log(dataStore);
 </script>
 <template>
   <v-container>

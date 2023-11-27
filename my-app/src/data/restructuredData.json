@@ -126,7 +126,7 @@
       {
         "id": "sva",
         "classId": "assault",
-        "name": "SVA",
+        "name": "SVA 545",
         "progress": 0,
         "slug": "sva",
         "image": "/mw3-loadout-sva-545-1-removebg-preview.png",
@@ -135,11 +135,47 @@
       {
         "id": "mtz",
         "classId": "assault",
-        "name": "MTZ",
+        "name": "MTZ-556",
         "progress": 0,
         "slug": "mtz",
         "image": "/mw3-loadout-sva-545-1-removebg-preview.png",
         "description": "This weapon system fires the first two rounds nearly at the same time, making this an incredibly lethal weapon in careful hands."
+      },
+      {
+        "id": "holger",
+        "classId": "assault",
+        "name": "Holger 556",
+        "progress": 0,
+        "slug": "holger",
+        "image": "/mw3-loadout-sva-545-1-removebg-preview.png",
+        "description": "Chambered in 5.56, this AR offers exceptional range and reliability for most engagements."
+      },
+      {
+        "id": "mcw",
+        "classId": "assault",
+        "name": "MCW",
+        "progress": 0,
+        "slug": "mcw",
+        "image": "/mw3-loadout-sva-545-1-removebg-preview.png",
+        "description": "This remarkably adaptable assault rifle features phenomenal recoil control and versatility from a lightweight frame chambered in 5.56."
+      },
+      {
+        "id": "dg-58",
+        "classId": "assault",
+        "name": "DG-58",
+        "progress": 0,
+        "slug": "dg-58",
+        "image": "/mw3-loadout-sva-545-1-removebg-preview.png",
+        "description": "With excellent recoil control and three-round burst fire, this bullpup AR dominates at mid- to long range."
+      },
+      {
+        "id": "fr556",
+        "classId": "assault",
+        "name": "FR 5.56",
+        "progress": 0,
+        "slug": "fr556",
+        "image": "/mw3-loadout-sva-545-1-removebg-preview.png",
+        "description": "A three round burst bullpup AR. A well-placed burst can be extremely deadly at intermittent ranges."
       }
     ],
     "camos": [
@@ -362,7 +398,7 @@
           "status": "Locked",
           "statusReason": "Must complete Gilded Challenges for all weapons in class",
           "count": {
-            "completion": 25,
+            "completion": 10,
             "current": 0
           }
         }
