@@ -99,7 +99,6 @@ export const useDataStore = defineStore('counter', () => {
   function updateCamoComplete(currentCamo) {
     currentCamo.progress.status = "Complete";
 
-    const target = weaponCamos.value.find((camo) => camo.name === currentCamo.name);
     if(currentCamo.name === "Gilded") {
       queueForged();
     } else {
@@ -107,9 +106,6 @@ export const useDataStore = defineStore('counter', () => {
     }
   }
 
-    Object.assign(target, currentCamo);
-
-    queueNextInProgress(currentCamo);
   function queueForged() {
     if(!allClassWeaponsGilded.value) return;
     getClassForgedCamos.value.forEach((camo) => {
@@ -155,9 +151,8 @@ export const useDataStore = defineStore('counter', () => {
     )
 
     if(!nextLocked) return;
+
     if(nextLocked.name === "Gilded" && !allBaseCamosCompleted.value) return;
-    if(nextLocked.name === "Forged" && !allClassWeaponsGilded.value) return;
-    if(nextLocked.name === "Priceless" && !allWeaponsForged.value) return;
 
     nextLocked.progress.status = "In Progress"
   }
@@ -187,10 +182,6 @@ export const useDataStore = defineStore('counter', () => {
     ) {
       updateCamoInProgress(currentCamo)
     }
-
-    const target = weaponCamos.value.find((camo) => camo.name === currentCamo.name);
-
-    Object.assign(target, currentCamo);
   }
 
   // ACTION to increment the current camo's progression
@@ -206,10 +197,6 @@ export const useDataStore = defineStore('counter', () => {
       updateCamoComplete(currentCamo);
       return;
     }
-
-    const target = currentWeapon.value.camos.find((camo) => camo.name === currentCamo.name);
-
-    Object.assign(target, currentCamo);
   }
 
   // ACTION to max the current camo's progression
@@ -217,10 +204,6 @@ export const useDataStore = defineStore('counter', () => {
   function complete(currentCamo) {
 
     currentCamo.progress.count.current = currentCamo.progress.count.completion;
-
-    const target = weaponCamos.value.find((camo) => camo.name === currentCamo.name);
-
-    Object.assign(target, currentCamo);
 
     updateCamoComplete(currentCamo);
   }
