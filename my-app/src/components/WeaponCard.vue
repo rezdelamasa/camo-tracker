@@ -47,19 +47,20 @@
         >
           <v-col
             cols="12"
+            class="pb-0"
           >
             <p class="text-h6">Forged Camo</p>
-            <p v-if="forgedCamo.progress.status === 'Locked'"><span class="font-weight-bold mr-1">{{ forgedCamo.progress.status }}:</span>{{ forgedCamo.progress.statusReason }}</p>
+            <p v-if="!dataStore.allClassWeaponsGilded"><span class="font-weight-bold mr-1 my-2">{{ forgedCamo.progress.status }}:</span>{{ forgedCamo.progress.statusReason }}</p>
           </v-col>
           <v-col
             cols="7"
-            class="pb-0"
+            class="py-0"
           >
             <p>{{ forgedCamo.challenge }}</p>
           </v-col>
           <v-col
             cols="5"
-            class="pb-0"
+            class="py-0"
           >
             <p class="text-right">{{ forgedCamo.progress.count.current }} / {{ forgedCamo.progress.count.completion }}</p>
           </v-col>
@@ -68,6 +69,30 @@
               class="forged-progress"
               :model-value="forgedProgressPercentage"
             ></v-progress-linear>
+            <div class="d-flex justify-end mt-4">
+              <v-btn
+                  icon
+                  outlined
+                  class="mr-4 camo__progress-button"
+                  density="comfortable"
+                  @click="$emit('decrement', forgedCamo)"
+              >-</v-btn>
+              <v-btn
+                  icon
+                  outlined
+                  class="mr-4 camo__progress-button"
+                  density="comfortable"
+                  @click="$emit('increment',forgedCamo)"
+              >+</v-btn>
+              <v-btn
+                  icon
+                  outlined
+                  rounded="xs"
+                  class="camo__progress-button"
+                  density="comfortable"
+                  @click="$emit('complete', forgedCamo)"
+              >&#10003;</v-btn>
+            </div>
           </v-col>
         </v-row>
         <v-row>
