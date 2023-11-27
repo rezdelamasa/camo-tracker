@@ -362,7 +362,7 @@
           "status": "Locked",
           "statusReason": "Must complete Gilded Challenges for all weapons in class",
           "count": {
-            "completion": 25,
+            "completion": 10,
             "current": 0
           }
         }
