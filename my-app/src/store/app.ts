@@ -70,6 +70,12 @@ export const useDataStore = defineStore('counter', () => {
     )
   }
 
+  const getClassForgedCamos = computed(() => {
+    return data.value.camos.filter((camo) =>
+      camo.name === "Forged" && camo.classId === currentClass.value.id
+    )
+  })
+
   const getWeaponCamo = (weapon, camoString) => {
     console.log(weapon);
     console.log(camoString)
