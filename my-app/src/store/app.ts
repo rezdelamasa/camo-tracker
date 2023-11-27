@@ -150,7 +150,7 @@ export const useDataStore = defineStore('counter', () => {
 
     currentCamo.progress.status = "In Progress";
 
-    const target = currentWeapon.value.camos.find((camo) => camo.name === currentCamo.name);
+    const target = weaponCamos.value.find((camo) => camo.name === currentCamo.name);
 
     Object.assign(target, currentCamo);
   }
@@ -171,7 +171,7 @@ export const useDataStore = defineStore('counter', () => {
       updateCamoInProgress(currentCamo)
     }
 
-    const target = currentWeapon.value.camos.find((camo) => camo.name === currentCamo.name);
+    const target = weaponCamos.value.find((camo) => camo.name === currentCamo.name);
 
     Object.assign(target, currentCamo);
   }
