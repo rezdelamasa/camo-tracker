@@ -63,6 +63,31 @@ export const useDataStore = defineStore('counter', () => {
     ).length === baseCamos.value.length;
   })
 
+  // function get weapon parameter's camos
+  const getWeaponsCamosForGilded = (weapon) => {
+    return data.value.camos.filter((camo) =>
+      camo.weaponId === weapon.id && (camo.type === "Base" || camo.name === "Gilded")
+    )
+  }
+
+  const getWeaponCamo = (weapon, camoString) => {
+    console.log(weapon);
+    console.log(camoString)
+    const foundCamo = data.value.camos.find((camo) =>
+      camo.weaponId === weapon.id && camo.name == camoString
+    )
+
+    console.log(foundCamo)
+    return foundCamo
+  }
+
+  // GETTER for weapon gilded progress
+  const weaponGildedProgress = (weapon) => {
+    return getWeaponsCamosForGilded(weapon).filter((camo) =>
+      camo.progress.status === "Complete"
+    ).length
+  }
+
   // FUNCTION to update current camo progress status to complete
   // Used when incrementing, decrementing, or completing
   function updateCamoComplete(currentCamo) {
