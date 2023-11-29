@@ -76,6 +76,14 @@ export const useDataStore = defineStore('counter', () => {
     )
   })
 
+  const getClassGildedProgress = computed(() => {
+    const classGildedCamos = data.value.camos.filter((camo) =>
+      camo.name === "Gilded" && camo.progress.status === "Complete"
+    )
+
+    return classGildedCamos.length;
+  })
+
   const getWeaponCamo = (weapon, camoString) => {
     console.log(weapon);
     console.log(camoString)
@@ -208,5 +216,5 @@ export const useDataStore = defineStore('counter', () => {
     updateCamoComplete(currentCamo);
   }
 
-  return { data, decrement, increment, complete, currentClassWeapons, currentWeapon, currentClass, baseCamos, masteryCamos, weaponCamos, weaponGildedProgress, getWeaponCamo, allClassWeaponsGilded }
+  return { data, decrement, increment, complete, currentClassWeapons, currentWeapon, currentClass, baseCamos, masteryCamos, weaponCamos, weaponGildedProgress, getWeaponCamo, allClassWeaponsGilded, getClassGildedProgress }
 })

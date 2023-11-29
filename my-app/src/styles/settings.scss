@@ -10,7 +10,12 @@
 // );
 
 .main, .v-main {
-  background: #222226;
+  //background: #222226;
+  background: #161618;
+}
+
+.top-0 {
+  top: 0;
 }
 
 .class-card {
@@ -19,7 +24,16 @@
 }
 
 .camo-card {
+  //background: #161618;
+  background: #222226;
+}
+
+.bg-rd-black {
   background: #161618;
+}
+
+.z-index-10 {
+  z-index: 10;
 }
 
 .camo__progress-button {
