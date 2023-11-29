@@ -8,6 +8,11 @@
       </v-card-item>
 
       <v-card-text>
+        <ct-progress-bar
+            :model="classProgress.percentage"
+            text="Gilded"
+            :completion-count="6"
+        ></ct-progress-bar>
         <v-progress-linear :model-value="classProgress.percentage"></v-progress-linear>
         <div class="w-100 text-right mt-3">
           <router-link :to="'multiplayer/' + weaponClass.slug" class="text-white font-weight-bold">View</router-link>
@@ -19,6 +24,7 @@
 
 <script lang="ts" setup>
   import {computed} from "vue";
+  import CtProgressBar from "@/components/CtProgressBar.vue";
 
   const props = defineProps({
     weaponClass: Object,
