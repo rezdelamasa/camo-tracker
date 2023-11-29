@@ -1,11 +1,10 @@
 <template>
-  <v-container class="fill-height">
-    <v-card
-      width="400"
-      class="camo-card text-white"
-    >
-      <v-card-item>
-        <v-card-title class="text-h5">{{ props.weapon.name }}</v-card-title>
+  <v-card
+    width="400"
+    class="camo-card text-white"
+  >
+    <v-card-item>
+      <v-card-title class="text-h5">{{ props.weapon.name }}</v-card-title>
 
         <v-card-subtitle>
           <span
