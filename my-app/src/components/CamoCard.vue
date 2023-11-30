@@ -1,4 +1,6 @@
 <script setup lang="ts">
+  import CtProgressBar from "@/components/CtProgressBar.vue";
+
   const props = defineProps({
     weapon: Object,
     camo: Object
@@ -23,28 +25,11 @@
       <span class="text-grey-lighten-1 font-weight-bold">{{ props.camo.progress.status  }}:</span> {{ props.camo.progress.statusReason }}
     </p>
     <v-card-text>
-      <div class="d-flex justify-space-between mt-3 mb-2 text-white">
-        <p class="w-50 text-body-1 d-flex align-center">{{ props.camo.challenge }}</p>
-        <div class="d-flex w-50 justify-end align-center">
-          <v-text-field
-              class="progress__input mr-2"
-              density="compact"
-              hide-details
-              type="number"
-              v-model="props.camo.progress.count.current"
-              :readonly="props.camo.progress.status === 'Locked'"
-          ></v-text-field>
-          <p>/ {{ props.camo.progress.count.completion }}</p>
-        </div>
-      </div>
-      <div class="mt-4">
-        <v-progress-linear
-            :model-value="props.camo.progress.count.current / props.camo.progress.count.completion * 100"
-            height="6"
-            :color="props.camo.progress.count.current === props.camo.progress.count.completion ? 'green' : 'orange'"
-            class="mb-2"
-        />
-      </div>
+      <ct-progress-bar
+        :model="props.camo.progress.count.current"
+        :completion-count="props.camo.progress.count.completion"
+        :text="props.camo.challenge"
+      ></ct-progress-bar>
       <div class="d-flex justify-end mt-4">
         <v-btn
             icon

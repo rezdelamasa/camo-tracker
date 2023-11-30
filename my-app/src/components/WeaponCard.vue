@@ -17,28 +17,34 @@
     </v-card-item>
 
     <v-card-text>
-      <v-row v-if="gildedProgressCount < 5">
-        <v-col
-          cols="7"
-          class="pb-0"
-        >
-          <p>Base and Gilded Camos</p>
-        </v-col>
-        <v-col
-          cols="5"
-          class="d-flex justify-end align-end pb-0"
-        >
-          <p class="text-right">{{ gildedProgressCount }} / 5</p>
-        </v-col>
-        <v-col
-          cols="12"
-        >
-          <v-progress-linear
-              :model-value="gildedProgressCount / 5 * 100"
-              color="green"
-          ></v-progress-linear>
-        </v-col>
-      </v-row>
+<!--      <v-row>-->
+<!--        <v-col-->
+<!--          cols="7"-->
+<!--          class="pb-0"-->
+<!--        >-->
+<!--          <p>Base and Gilded Camos</p>-->
+<!--        </v-col>-->
+<!--        <v-col-->
+<!--          cols="5"-->
+<!--          class="d-flex justify-end align-end pb-0"-->
+<!--        >-->
+<!--          <p class="text-right">{{ gildedProgressCount }} / 5</p>-->
+<!--        </v-col>-->
+<!--        <v-col-->
+<!--          cols="12"-->
+<!--        >-->
+<!--          <v-progress-linear-->
+<!--              :model-value="gildedProgressCount / 5 * 100"-->
+<!--              color="green"-->
+<!--          ></v-progress-linear>-->
+<!--        </v-col>-->
+<!--      </v-row>-->
+      <ct-progress-bar
+          v-if="gildedProgressCount < 5"
+          :model="gildedProgressCount"
+          text="Base and Gilded Camos"
+          :completion-count="5"
+      ></ct-progress-bar>
       <v-row
         class="mt-0"
         :class="{'text-white': dataStore.allClassWeaponsGilded, 'text-grey': !dataStore.allClassWeaponsGilded}"
@@ -49,25 +55,14 @@
           class="pb-0"
         >
           <p class="text-h6">Forged Camo</p>
-          <p v-if="!dataStore.allClassWeaponsGilded" class="mt-0 mb-6"><span class="font-weight-bold mr-1">{{ forgedCamo.progress.status }}:</span>{{ forgedCamo.progress.statusReason }}</p>
-        </v-col>
-        <v-col
-          cols="7"
-          class="py-0"
-        >
-          <p>{{ forgedCamo.challenge }}</p>
-        </v-col>
-        <v-col
-          cols="5"
-          class="py-0"
-        >
-          <p class="text-right">{{ forgedCamo.progress.count.current }} / {{ forgedCamo.progress.count.completion }}</p>
+          <p v-if="!dataStore.allClassWeaponsGilded" class="mt-0"><span class="font-weight-bold mr-1">{{ forgedCamo.progress.status }}:</span>{{ forgedCamo.progress.statusReason }}</p>
         </v-col>
         <v-col>
-          <v-progress-linear
-            class="forged-progress"
-            :model-value="forgedProgressPercentage"
-          ></v-progress-linear>
+          <ct-progress-bar
+              :model="forgedProgressPercentage"
+              :text="forgedCamo.challenge"
+              :completion-count="forgedCamo.progress.count.completion"
+          ></ct-progress-bar>
           <div class="d-flex justify-end mt-4">
             <v-btn
                 icon
@@ -115,6 +110,7 @@
   import {useRoute} from "vue-router";
   import {useDataStore} from "@/store/app";
   import {computed, ref} from "vue";
+  import CtProgressBar from "@/components/CtProgressBar.vue";
 
   const props = defineProps({
     weapon: Object,

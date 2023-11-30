@@ -4,6 +4,7 @@
   import {useRoute} from "vue-router";
 
   import { useDataStore } from '@/store/app'
+  import CtProgressBar from "@/components/CtProgressBar.vue";
 
   const dataStore = useDataStore();
 
@@ -45,31 +46,11 @@
         </div>
         <v-card class="camo-card text-white mt-2">
           <v-card-text>
-            <v-row
-              no-gutters
-              class="my-1"
-            >
-              <v-col
-                cols="6"
-              >
-                <h4 class="text-amber">Gilded</h4>
-              </v-col>
-              <v-col
-                cols="6"
-              >
-                <p class="text-right">2 / 6</p>
-              </v-col>
-              <v-col
-                cols="12"
-                class="py-2"
-              >
-                <v-progress-linear
-                  height="8"
-                  rounded
-                  :model-value="dataStore.getClassGildedProgress / 6 * 100" color="amber"
-                />
-              </v-col>
-            </v-row>
+            <ct-progress-bar
+                :model="dataStore.getClassGildedProgress"
+                text="Gilded"
+                :completion-count="dataStore.currentClassWeapons.length"
+            ></ct-progress-bar>
           </v-card-text>
         </v-card>
       </v-col>
