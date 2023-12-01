@@ -28,9 +28,11 @@
         :model="props.camo.progress.count.current"
         :completion-count="props.camo.progress.count.completion"
         :text="props.camo.challenge"
+        :locked="props.camo.progress.status === 'Locked'"
       ></ct-progress-bar>
       <progress-button-group
           :camo="props.camo"
+          :locked="props.camo.progress.status === 'Locked'"
       ></progress-button-group>
     </v-card-text>
 
