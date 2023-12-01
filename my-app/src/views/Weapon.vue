@@ -72,28 +72,6 @@
               </v-row>
             </v-expansion-panel-text>
           </v-expansion-panel>
-<!--          <v-expansion-panel-->
-<!--              class="bg-transparent"-->
-<!--              title="Completed"-->
-<!--              value="completed"-->
-<!--          >-->
-<!--            <v-expansion-panel-text>-->
-<!--              <v-row>-->
-<!--                <v-col-->
-<!--                    cols="12"-->
-<!--                    v-for="camo in dataStore.storeComplete"-->
-<!--                >-->
-<!--                  <progress-card-->
-<!--                      :weapon="dataStore.currentWeapon"-->
-<!--                      :camo="camo"-->
-<!--                      @decrement="(inProgressCamo) => handleDecrement(inProgressCamo)"-->
-<!--                      @increment="(inProgressCamo) => handleIncrement(inProgressCamo)"-->
-<!--                      @complete="(inProgressCamo) => handleComplete(inProgressCamo)"-->
-<!--                  ></progress-card>-->
-<!--                </v-col>-->
-<!--              </v-row>-->
-<!--            </v-expansion-panel-text>-->
-<!--          </v-expansion-panel>-->
         </v-expansion-panels>
       </v-col>
     </v-row>
