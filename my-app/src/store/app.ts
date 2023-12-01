@@ -167,9 +167,12 @@ export const useDataStore = defineStore('counter', () => {
 
     currentCamo.progress.status = "In Progress";
 
-    const target = weaponCamos.value.find((camo) => camo.name === currentCamo.name);
+    if(currentCamo.type === 'Base') {
+      const weapon = currentWeapon;
+      const weaponGilded = getWeaponCamo(weapon.value, 'Gilded');
 
-    Object.assign(target, currentCamo);
+      weaponGilded.progress.status = "Locked";
+    }
   }
 
   // ACTION to decrement the current camo's progression
