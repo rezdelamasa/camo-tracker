@@ -63,30 +63,7 @@
               :text="forgedCamo.challenge"
               :completion-count="forgedCamo.progress.count.completion"
           ></ct-progress-bar>
-          <div class="d-flex justify-end mt-4">
-            <v-btn
-                icon
-                outlined
-                class="mr-4 camo__progress-button"
-                density="comfortable"
-                @click="$emit('decrement', forgedCamo)"
-            >-</v-btn>
-            <v-btn
-                icon
-                outlined
-                class="mr-4 camo__progress-button"
-                density="comfortable"
-                @click="$emit('increment',forgedCamo)"
-            >+</v-btn>
-            <v-btn
-                icon
-                outlined
-                rounded="xs"
-                class="camo__progress-button"
-                density="comfortable"
-                @click="$emit('complete', forgedCamo)"
-            >&#10003;</v-btn>
-          </div>
+          <progress-button-group :camo="forgedCamo"></progress-button-group>
         </v-col>
       </v-row>
       <v-row>
@@ -111,6 +88,7 @@
   import {useDataStore} from "@/store/app";
   import {computed, ref} from "vue";
   import CtProgressBar from "@/components/CtProgressBar.vue";
+  import ProgressButtonGroup from "@/components/ProgressButtonGroup.vue";
 
   const props = defineProps({
     weapon: Object,
