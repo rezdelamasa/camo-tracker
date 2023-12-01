@@ -2,14 +2,20 @@
 import {useDataStore} from "@/store/app";
 
 const props = defineProps({
-  camo: Object
+  camo: {
+    type: Object,
+  },
+  locked: {
+    type: Boolean,
+    default: false
+  }
 })
 
 const dataStore = useDataStore();
 </script>
 
 <template>
-  <v-row no-gutters>
+  <v-row no-gutters v-if="!locked">
     <v-col
       cols="2"
       class="pr-1"
