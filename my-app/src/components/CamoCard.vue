@@ -1,5 +1,6 @@
 <script setup lang="ts">
   import CtProgressBar from "@/components/CtProgressBar.vue";
+  import ProgressButtonGroup from "@/components/ProgressButtonGroup.vue";
 
   const props = defineProps({
     weapon: Object,
@@ -30,33 +31,9 @@
         :completion-count="props.camo.progress.count.completion"
         :text="props.camo.challenge"
       ></ct-progress-bar>
-      <div class="d-flex justify-end mt-4">
-        <v-btn
-            icon
-            outlined
-            class="mr-4 camo__progress-button"
-            density="comfortable"
-            :disabled="props.camo.progress.status === 'Locked'"
-            @click="$emit('decrement', props.camo)"
-        >-</v-btn>
-        <v-btn
-            icon
-            outlined
-            class="mr-4 camo__progress-button"
-            density="comfortable"
-            :disabled="props.camo.progress.status === 'Locked'"
-            @click="$emit('increment',props.camo)"
-        >+</v-btn>
-        <v-btn
-            icon
-            outlined
-            rounded="xs"
-            class="camo__progress-button"
-            density="comfortable"
-            :disabled="props.camo.progress.status === 'Locked'"
-            @click="$emit('complete', props.camo)"
-        >&#10003;</v-btn>
-      </div>
+      <progress-button-group
+          :camo="props.camo"
+      ></progress-button-group>
     </v-card-text>
 
   </v-card>
