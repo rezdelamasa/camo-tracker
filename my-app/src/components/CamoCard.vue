@@ -6,8 +6,6 @@
     weapon: Object,
     camo: Object
   })
-
-  // const { name, doubleCount } = store
 </script>
 
 <template>
