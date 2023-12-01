@@ -11,18 +11,6 @@
     return route.params;
   })
 
-  const handleDecrement = (inProgressCamo) => {
-    dataStore.decrement(inProgressCamo);
-  }
-
-  const handleIncrement = (inProgressCamo) => {
-    dataStore.increment(inProgressCamo);
-  }
-
-  const handleComplete = (inProgressCamo) => {
-    dataStore.complete(inProgressCamo);
-  }
-
   const panels = ref(["base"]);
 </script>
 <template>
@@ -60,9 +48,6 @@
                   <camo-card
                       :weapon="dataStore.currentWeapon"
                       :camo="camo"
-                      @decrement="(inProgressCamo) => handleDecrement(inProgressCamo)"
-                      @increment="(inProgressCamo) => handleIncrement(inProgressCamo)"
-                      @complete="(inProgressCamo) => handleComplete(inProgressCamo)"
                   ></camo-card>
                 </v-col>
               </v-row>
@@ -82,9 +67,6 @@
                   <camo-card
                       :weapon="dataStore.currentWeapon"
                       :camo="camo"
-                      @decrement="(inProgressCamo) => handleDecrement(inProgressCamo)"
-                      @increment="(inProgressCamo) => handleIncrement(inProgressCamo)"
-                      @complete="(inProgressCamo) => handleComplete(inProgressCamo)"
                   ></camo-card>
                 </v-col>
               </v-row>
