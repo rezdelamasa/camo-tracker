@@ -216,5 +216,13 @@ export const useDataStore = defineStore('counter', () => {
     updateCamoComplete(currentCamo);
   }
 
-  return { data, decrement, increment, complete, currentClassWeapons, currentWeapon, currentClass, baseCamos, masteryCamos, weaponCamos, weaponGildedProgress, getWeaponCamo, allClassWeaponsGilded, getClassGildedProgress }
+  // ACTION to reset the current camo's progression
+  // dispatched from UI
+  function reset(currentCamo) {
+
+    currentCamo.progress.count.current = 0;
+
+  }
+
+  return { data, decrement, increment, complete, reset, currentClassWeapons, currentWeapon, currentClass, baseCamos, masteryCamos, weaponCamos, weaponGildedProgress, getWeaponCamo, allClassWeaponsGilded, getClassGildedProgress }
 })
