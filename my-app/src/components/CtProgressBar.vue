@@ -1,22 +1,29 @@
 <script setup lang="ts">
-import { useDataStore } from '@/store/app'
 import {computed} from "vue";
 
 const props = defineProps({
   model: Number,
   text: String,
-  completionCount: Number
+  completionCount: Number,
+  locked: {
+    type: Boolean,
+    default: false
+  }
 })
 
-const barColor = computed(() =>
-  props.model < props.completionCount ? 'orange' : 'green'
-)
+const barColor = computed(() => {
+  if(props.locked) return 'grey'
+  else {
+    return props.model < props.completionCount ? 'orange' : 'green'
+  }
+});
 </script>
 
 <template>
   <v-row
       no-gutters
-      class="my-1 text-white"
+      class="my-1"
+      :class="{'text-white': !locked, 'text-grey': locked}"
   >
     <v-col
         cols="6"
@@ -36,7 +43,8 @@ const barColor = computed(() =>
       <v-progress-linear
           height="8"
           rounded
-          :model-value="props.model / props.completionCount * 100" :color="barColor"
+          :model-value="props.model / props.completionCount * 100"
+          :color="barColor"
       />
     </v-col>
   </v-row>

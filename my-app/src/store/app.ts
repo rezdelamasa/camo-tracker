@@ -85,13 +85,10 @@ export const useDataStore = defineStore('counter', () => {
   })
 
   const getWeaponCamo = (weapon, camoString) => {
-    console.log(weapon);
-    console.log(camoString)
     const foundCamo = data.value.camos.find((camo) =>
       camo.weaponId === weapon.id && camo.name == camoString
     )
 
-    console.log(foundCamo)
     return foundCamo
   }
 
@@ -170,9 +167,12 @@ export const useDataStore = defineStore('counter', () => {
 
     currentCamo.progress.status = "In Progress";
 
-    const target = weaponCamos.value.find((camo) => camo.name === currentCamo.name);
+    if(currentCamo.type === 'Base') {
+      const weapon = currentWeapon;
+      const weaponGilded = getWeaponCamo(weapon.value, 'Gilded');
 
-    Object.assign(target, currentCamo);
+      weaponGilded.progress.status = "Locked";
+    }
   }
 
   // ACTION to decrement the current camo's progression
@@ -224,5 +224,5 @@ export const useDataStore = defineStore('counter', () => {
 
   }
 
-  return { data, decrement, increment, complete, reset, currentClassWeapons, currentWeapon, currentClass, baseCamos, masteryCamos, weaponCamos, weaponGildedProgress, getWeaponCamo, allClassWeaponsGilded, getClassGildedProgress }
+  return { data, decrement, increment, complete, reset, currentClassWeapons, currentWeapon, currentClass, baseCamos, masteryCamos, weaponCamos, weaponGildedProgress, getWeaponCamo, allClassWeaponsGilded, getClassGildedProgress, allBaseCamosCompleted }
 })
