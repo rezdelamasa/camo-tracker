@@ -40,8 +40,9 @@
               :model="forgedCamo.progress.count.current"
               :text="forgedCamo.challenge"
               :completion-count="forgedCamo.progress.count.completion"
+              :locked="!dataStore.allClassWeaponsGilded"
           ></ct-progress-bar>
-          <progress-button-group :camo="forgedCamo"></progress-button-group>
+          <progress-button-group :camo="forgedCamo" :locked="!dataStore.allClassWeaponsGilded"></progress-button-group>
         </v-col>
       </v-row>
       <v-row>
