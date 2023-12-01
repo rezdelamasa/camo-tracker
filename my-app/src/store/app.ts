@@ -85,13 +85,10 @@ export const useDataStore = defineStore('counter', () => {
   })
 
   const getWeaponCamo = (weapon, camoString) => {
-    console.log(weapon);
-    console.log(camoString)
     const foundCamo = data.value.camos.find((camo) =>
       camo.weaponId === weapon.id && camo.name == camoString
     )
 
-    console.log(foundCamo)
     return foundCamo
   }
 
