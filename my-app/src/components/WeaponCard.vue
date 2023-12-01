@@ -125,10 +125,6 @@
 
   const forgedCamo = ref(dataStore.getWeaponCamo(props.weapon, 'Forged'))
 
-  const allClassWeaponsGilded = computed(() => {
-    return dataStore.allClassWeaponsGilded;
-  })
-
   const forgedProgressPercentage = computed(() => {
     return forgedCamo.value.progress.count.current / forgedCamo.value.progress.count.completion * 100
   })
