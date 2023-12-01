@@ -59,7 +59,7 @@
         </v-col>
         <v-col>
           <ct-progress-bar
-              :model="forgedProgressPercentage"
+              :model="forgedCamo.progress.count.current"
               :text="forgedCamo.challenge"
               :completion-count="forgedCamo.progress.count.completion"
           ></ct-progress-bar>
