@@ -224,5 +224,5 @@ export const useDataStore = defineStore('counter', () => {
 
   }
 
-  return { data, decrement, increment, complete, reset, currentClassWeapons, currentWeapon, currentClass, baseCamos, masteryCamos, weaponCamos, weaponGildedProgress, getWeaponCamo, allClassWeaponsGilded, getClassGildedProgress }
+  return { data, decrement, increment, complete, reset, currentClassWeapons, currentWeapon, currentClass, baseCamos, masteryCamos, weaponCamos, weaponGildedProgress, getWeaponCamo, allClassWeaponsGilded, getClassGildedProgress, allBaseCamosCompleted }
 })
