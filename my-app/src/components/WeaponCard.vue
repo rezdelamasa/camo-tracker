@@ -17,28 +17,6 @@
     </v-card-item>
 
     <v-card-text>
-<!--      <v-row>-->
-<!--        <v-col-->
-<!--          cols="7"-->
-<!--          class="pb-0"-->
-<!--        >-->
-<!--          <p>Base and Gilded Camos</p>-->
-<!--        </v-col>-->
-<!--        <v-col-->
-<!--          cols="5"-->
-<!--          class="d-flex justify-end align-end pb-0"-->
-<!--        >-->
-<!--          <p class="text-right">{{ gildedProgressCount }} / 5</p>-->
-<!--        </v-col>-->
-<!--        <v-col-->
-<!--          cols="12"-->
-<!--        >-->
-<!--          <v-progress-linear-->
-<!--              :model-value="gildedProgressCount / 5 * 100"-->
-<!--              color="green"-->
-<!--          ></v-progress-linear>-->
-<!--        </v-col>-->
-<!--      </v-row>-->
       <ct-progress-bar
           v-if="gildedProgressCount < 5"
           :model="gildedProgressCount"
